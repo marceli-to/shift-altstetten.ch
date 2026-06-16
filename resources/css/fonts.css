@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/glacial-indifference.regular-webfont.woff2') format('woff2'),
+       url('/fonts/glacial-indifference.regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/glacial-indifference.bold-webfont.woff2') format('woff2'),
+       url('/fonts/glacial-indifference.bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Glacial Indifference', sans-serif;
+}

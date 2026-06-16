@@ -1,0 +1,10 @@
+@theme {
+  /* Shift Altstetten palette */
+  --color-cocoa: #48261D;
+  --color-blush: #FFBDC5;
+  --color-sky: #B2CDFF;
+
+  --color-state-free: #0DAD23;
+  --color-state-reserved: #E69600;
+  --color-state-taken: #FF0000;
+}

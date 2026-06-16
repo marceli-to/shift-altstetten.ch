@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+@import './colors.css';
+@import './fonts.css';
+@import './fontsize.css';
+@import './iso.css';
+@import './spacing.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';  
+@source '../**/*.js';
+
+strong {
+  @apply font-bold;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+p:not(:last-of-type){
+  @apply mb-16 md:mb-24;
+}
+
+main ul {
+  @apply mb-16 md:mb-24 pl-20;
+}
+
+main li {
+  @apply mb-5 list-item list-disc
+}
+
+/* Swiper: ensure slides fill their container */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  @apply h-full;
+}
+
+/* Swiper pagination dots */
+.swiper-pagination {
+  @apply flex justify-center gap-8;
+}
+
+.swiper-pagination-bullet {
+  @apply w-8 h-8 rounded-full bg-white/30 cursor-pointer transition-opacity;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+/* Prevent flash of unstyled content before ScrollReveal initialises */
+[data-reveal],
+[data-reveal-down],
+[data-reveal-children] > * {
+  @apply invisible;
+}

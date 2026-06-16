@@ -1,0 +1,7 @@
+@props([
+  'class' => '',
+])
+
+<div class="swiper-slide {{ $class }}">
+  {{ $slot }}
+</div>
