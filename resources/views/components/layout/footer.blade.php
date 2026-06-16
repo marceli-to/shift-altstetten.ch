@@ -1,15 +1,15 @@
 <footer class="bg-white md:bg-cocoa text-cocoa md:text-blush pt-90 pb-30 md:py-32 text-[20px] 2xl:text-[24px]">
-  <x-layout.inner class="2xl:pl-160">
+  <x-layout.inner>
     <div class="grid grid-cols-12 gap-20 items-end">
 
-      <div class="col-span-2 md:col-span-1 mb-2">
+      <div class="col-span-2 md:col-span-1 mb-4">
         <a
           href="https://www.cavegn-immobilien.ch"
           target="_blank"
           rel="noopener noreferrer"
           title="Zur Website von Cavegn Immobilien"
           aria-label="Zur Website von Cavegn Immobilien">
-          <x-icons.logo-cavegn class="block w-auto h-160 xl:h-180" />
+          <x-icons.logo-cavegn class="block w-auto h-160 md:h-140 2xl:h-180" />
         </a>
       </div>
 

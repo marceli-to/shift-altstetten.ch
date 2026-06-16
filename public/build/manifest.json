@@ -1,12 +1,28 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CCrJ49JK.css",
+    "file": "assets/app-C3aWHJys.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
     ]
+  },
+  "resources/fonts/glacial-indifference.bold-webfont.woff": {
+    "file": "assets/glacial-indifference.bold-webfont-D6897apX.woff",
+    "src": "resources/fonts/glacial-indifference.bold-webfont.woff"
+  },
+  "resources/fonts/glacial-indifference.bold-webfont.woff2": {
+    "file": "assets/glacial-indifference.bold-webfont-D7oIkgLF.woff2",
+    "src": "resources/fonts/glacial-indifference.bold-webfont.woff2"
+  },
+  "resources/fonts/glacial-indifference.regular-webfont.woff": {
+    "file": "assets/glacial-indifference.regular-webfont-BcSywGAW.woff",
+    "src": "resources/fonts/glacial-indifference.regular-webfont.woff"
+  },
+  "resources/fonts/glacial-indifference.regular-webfont.woff2": {
+    "file": "assets/glacial-indifference.regular-webfont-B1husqWA.woff2",
+    "src": "resources/fonts/glacial-indifference.regular-webfont.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-CVLdJrgP.js",

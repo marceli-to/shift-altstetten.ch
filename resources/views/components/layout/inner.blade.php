@@ -1,3 +1,3 @@
-<div class="max-w-page mx-auto px-24 {{ $class ?? '' }}">
+<div class="max-w-page mx-auto px-20 {{ $class ?? '' }}">
   {{ $slot }}
 </div>
