@@ -38,7 +38,7 @@ const Filter = (() => {
 
   const updateSelectStyle = (el) => {
     const isDefault = el.selectedIndex === 0;
-    el.classList.toggle('bg-yellow-500', !isDefault);
+    el.classList.toggle('bg-cocoa', !isDefault);
   };
 
   const apply = () => {
@@ -73,7 +73,7 @@ const Filter = (() => {
     activeFilters = {};
     document.querySelectorAll(selectors.attribute).forEach((select) => {
       select.selectedIndex = 0;
-      select.classList.remove('bg-yellow-500');
+      select.classList.remove('bg-cocoa');
     });
     apply();
   };

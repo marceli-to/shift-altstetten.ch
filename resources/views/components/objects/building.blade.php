@@ -19,7 +19,7 @@
   <div class="w-full overflow-x-auto">
     <table class="w-full text-left" data-objects>
       <thead>
-        <tr class="bg-yellow-500 text-yellow-500! font-display font-bold uppercase tracking-wider text-sm lg:text-lg [&>th]:py-8 [&>th]:px-5 [&>th]:align-bottom">
+        <tr class="bg-cocoa text-cocoa font-display font-bold uppercase tracking-wider text-sm lg:text-lg [&>th]:py-8 [&>th]:px-5 [&>th]:align-bottom">
           <th>Nr.</th>
           <th>Etage</th>
           <th>Zi.</th>
@@ -45,7 +45,7 @@
             data-object-state="{{ $state }}"
             data-object-rooms="{{ $apartment['rooms'] }}"
             data-object-floor="{{ $apartment['floor'] }}"
-            class="border-b border-yellow-500 text-sm lg:text-lg hover:bg-yellow-500/50 transition-colors [&>td]:py-8 [&>td]:px-5">
+            class="border-b border-cocoa text-sm lg:text-lg hover:bg-cocoa/50 transition-colors [&>td]:py-8 [&>td]:px-5">
             <td class="font-bold">{{ $apartment['title'] }}</td>
             <td>{{ $apartment['floor'] ?? '–' }}</td>
             <td>{{ $roomLabel($apartment['rooms'] ?? 0) }}</td>
@@ -56,7 +56,7 @@
             <td class="text-center">
               @if($plan && $plan !== '#')
                 <a href="{{ $plan }}" target="_blank" rel="noopener"
-                  class="inline-flex text-yellow-500! hover:text-yellow-500!/70" aria-label="Grundriss herunterladen">
+                  class="inline-flex text-cocoa hover:text-cocoa/70" aria-label="Grundriss herunterladen">
                   <x-icons.file class="w-20 h-20" />
                 </a>
               @else

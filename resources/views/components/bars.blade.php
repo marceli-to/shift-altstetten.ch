@@ -1,6 +1,6 @@
 @props([
   'count' => 8,
-  'width' => 'w-[10px]',
+  'width' => 'w-10',
   'color' => 'bg-blush',
   'rounded' => false,
 ])
@@ -12,7 +12,7 @@
     default => '',
   };
 @endphp
-<div {{ $attributes->class('flex gap-x-20') }}>
+<div {{ $attributes->class('flex') }}>
   @for ($i = 0; $i < $count; $i++)
     <div class="{{ $width }} {{ $color }} {{ $roundedClass }}">
     </div>

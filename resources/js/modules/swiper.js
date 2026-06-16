@@ -2,7 +2,9 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-document.querySelectorAll('.gallery-swiper').forEach((el) => {
+document.querySelectorAll('.swiper').forEach((el) => {
+  const root = el.parentElement;
+
   new Swiper(el, {
     modules: [Navigation, Pagination, Autoplay],
     loop: true,
@@ -11,11 +13,11 @@ document.querySelectorAll('.gallery-swiper').forEach((el) => {
       disableOnInteraction: false,
     },
     navigation: {
-      prevEl: el.parentElement.querySelector('.gallery-swiper-prev'),
-      nextEl: el.parentElement.querySelector('.gallery-swiper-next'),
+      prevEl: root.querySelector('.swiper-button-prev'),
+      nextEl: root.querySelector('.swiper-button-next'),
     },
     pagination: {
-      el: el.parentElement.querySelector('.swiper-pagination'),
+      el: root.querySelector('.swiper-pagination'),
       clickable: true,
     },
   });

@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-C3aWHJys.css",
+    "file": "assets/app-DIE6yoKy.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -25,7 +25,7 @@
     "src": "resources/fonts/glacial-indifference.regular-webfont.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CVLdJrgP.js",
+    "file": "assets/app-BnyCKXaP.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

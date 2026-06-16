@@ -1,6 +1,6 @@
 @props([
   'variant' => null,
-  'bg' => 'bg-yellow-500',
+  'bg' => 'bg-cocoa',
   'class' => '',
 ])
 

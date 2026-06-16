@@ -48,11 +48,11 @@ main li {
 }
 
 .swiper-pagination-bullet {
-  @apply w-8 h-8 rounded-full bg-white/30 cursor-pointer transition-opacity;
+  @apply w-8 h-8 rounded-full border border-cocoa bg-white cursor-pointer transition-opacity;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-white;
+  @apply bg-cocoa;
 }
 
 /* Prevent flash of unstyled content before ScrollReveal initialises */

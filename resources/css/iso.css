@@ -49,7 +49,7 @@
 }
 
 [data-object].is-active {
-  @apply bg-yellow-500/50!;
+  @apply bg-cocoa/50!;
 }
 
 /* Floor classes */
