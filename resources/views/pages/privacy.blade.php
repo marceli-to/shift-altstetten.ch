@@ -26,7 +26,7 @@
     <li>Uhrzeit der Serveranfrage</li>
   </ul>
   <p>Diese Daten können nicht direkt bestimmten Personen zugeordnet werden. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.</p>
-  <p>Diese Daten sowie alle Daten dieser Website werden bei unserem Hosting-Provider webkeeper GmbH, 8604 Volketswil, Schweiz gespeichert, deren Datenschutzerklärung Sie <x-links.styled href="https://www.webkeeper.ch/de/unternehmen/datenschutz" target="_blank">hier</x-links.styled> finden.</p>
+  <p>Diese Daten sowie alle Daten dieser Website werden bei unserem Hosting-Provider webkeeper GmbH, 8604 Volketswil, Schweiz gespeichert, deren Datenschutzerklärung Sie <x-links.styled href="https://www.webkeeper.ch/de/unternehmen/datenschutz" target="_blank" label="Datenschutzerklärung von webkeeper">hier</x-links.styled> finden.</p>
 
   <x-headings.h2 class="text-4xl! md:text-7xl!">
     Kontaktformular
@@ -49,7 +49,7 @@
   <p>Für die Verarbeitung der Daten wird im Rahmen des Absendevorgangs Ihre Einwilligung eingeholt und auf diese Datenschutzerklärung verwiesen.</p>
   <p>Die Verarbeitung der personenbezogenen Daten aus der Eingabemaske dient uns allein zur Bearbeitung der Kontaktaufnahme. Die sonstigen während des Absendevorgangs verarbeiteten personenbezogenen Daten dienen dazu, einen Missbrauch des Kontaktformulars zu verhindern und die Sicherheit unserer informationstechnischen Systeme sicherzustellen.</p>
   <p><strong>Dauer der Speicherung und Widerspruchsrecht</strong></p>
-  <p>Sie haben jederzeit die Möglichkeit, Ihre Einwilligung zur Verarbeitung der personenbezogenen Daten per E-Mail an <x-links.styled href="mailto:shift@cavegn-immobilien.ch">shift@cavegn-immobilien.ch</x-links.styled> zu widerrufen. In einem solchen Fall kann die Konversation nicht fortgeführt werden.</p>
+  <p>Sie haben jederzeit die Möglichkeit, Ihre Einwilligung zur Verarbeitung der personenbezogenen Daten per E-Mail an <x-links.styled href="mailto:shift@cavegn-immobilien.ch" label="E-Mail an shift@cavegn-immobilien.ch">shift@cavegn-immobilien.ch</x-links.styled> zu widerrufen. In einem solchen Fall kann die Konversation nicht fortgeführt werden.</p>
   <p>Alle personenbezogenen Daten, die im Zuge der Kontaktaufnahme gespeichert wurden, werden in diesem Fall gelöscht.</p>
 
   <x-headings.h2 class="text-4xl! md:text-7xl!">
@@ -60,8 +60,8 @@
   <p><strong>IP Anonymisierung</strong></p>
   <p>Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</p>
   <p><strong>Browser Plugin</strong></p>
-  <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem diesem <x-links.styled href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank">Link</x-links.styled> verfügbare Browser-Plugin herunterladen und installieren.</p>
-  <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von <x-links.styled href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank">Google</x-links.styled></p>
+  <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem diesem <x-links.styled href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" label="Browser-Plugin zur Deaktivierung von Google Analytics">Link</x-links.styled> verfügbare Browser-Plugin herunterladen und installieren.</p>
+  <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von <x-links.styled href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" label="Datenschutzerklärung von Google Analytics">Google</x-links.styled></p>
   <p><strong>Auftragsdatenverarbeitung</strong></p>
   <p>Wir haben mit Google einen Vertrag zur Auftragsdatenverarbeitung abgeschlossen und setzen die strengen Vorgaben der deutschen Datenschutzbehörden bei der Nutzung von Google Analytics vollständig um.</p>
   <p><strong>Demografische Merkmale bei Google Analytics</strong></p>
@@ -75,12 +75,12 @@
   <p>Sofern Sie auf dieser Webseite Google Maps aufrufen, speichert Google über Ihren Internet-Browser ein Cookie auf Ihrem Endgerät. Um den Standort anzuzeigen, werden Ihre Nutzereinstellungen und -daten verarbeitet. Hierbei kann nicht ausgeschlossen werden, dass Google Server in den USA einsetzt. Die Verarbeitung beruht auf dem berechtigten Interesse des Webseitenbetreibers. Das berechtigte Interesse liegt in der Optimierung der Funktionalität des Internetauftritts.</p>
   <p><strong>Dauer der Speicherung und Widerspruchsrecht</strong></p>
   <p>Sofern Sie mit dieser Verarbeitung nicht einverstanden sind, haben Sie die Möglichkeit, die Installation der Cookies durch die entsprechenden Einstellungen in Ihrem Internet-Browser zu verhindern.</p>
-  <p>Zudem erfolgt die Nutzung von Google Maps sowie der über Google Maps erlangten Informationen nach den Google-Nutzungsbedingungen <x-links.styled href="http://policies.google.com/terms" target="_blank">policies.google.com/terms</x-links.styled> und den Geschäftsbedingungen für <x-links.styled href="http://www.google.com/intl/de_de/help/terms_maps.html" target="_blank">Google Maps</x-links.styled>.</p>
+  <p>Zudem erfolgt die Nutzung von Google Maps sowie der über Google Maps erlangten Informationen nach den Google-Nutzungsbedingungen <x-links.styled href="http://policies.google.com/terms" target="_blank" label="Google Nutzungsbedingungen">policies.google.com/terms</x-links.styled> und den Geschäftsbedingungen für <x-links.styled href="http://www.google.com/intl/de_de/help/terms_maps.html" target="_blank" label="Geschäftsbedingungen für Google Maps">Google Maps</x-links.styled>.</p>
 
   <x-headings.h2 class="text-4xl! md:text-7xl!">
     Recht auf Auskunft, Löschung, Sperrung
   </x-headings.h2>
-  <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden oder eine E-Mail an <x-links.styled href="mailto:shift@cavegn-immobilien.ch">shift@cavegn-immobilien.ch</x-links.styled> senden.</p>
+  <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden oder eine E-Mail an <x-links.styled href="mailto:shift@cavegn-immobilien.ch" label="E-Mail an shift@cavegn-immobilien.ch">shift@cavegn-immobilien.ch</x-links.styled> senden.</p>
 
   <x-headings.h2 class="text-4xl! md:text-7xl!">
     Verwendung von Adobe Fonts
@@ -95,7 +95,7 @@
     <li>Spracheinstellungen des Browsers</li>
   </ul>
   <p>Die Verarbeitung Ihrer personenbezogenen Daten im Zusammenhang mit Adobe Fonts erfolgt zum Zweck der Darstellung der Schriftarten auf dieser Webseite und zur Gewährleistung einer einheitlichen und ansprechenden visuellen Gestaltung. Die Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO, da wir ein berechtigtes Interesse an der visuellen Gestaltung und Benutzerfreundlichkeit unserer Webseite haben.</p>
-  <p>Weitere Informationen zur Datenverarbeitung durch Adobe Fonts finden Sie in der Datenschutzerklärung von Adobe Fonts <x-links.styled href="https://www.adobe.com/de/privacy/policies/adobe-fonts.html" target="_blank">hier</x-links.styled>.</p>
+  <p>Weitere Informationen zur Datenverarbeitung durch Adobe Fonts finden Sie in der Datenschutzerklärung von Adobe Fonts <x-links.styled href="https://www.adobe.com/de/privacy/policies/adobe-fonts.html" target="_blank" label="Datenschutzerklärung von Adobe Fonts">hier</x-links.styled>.</p>
   <p>Für weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten und zur Ausübung Ihrer Rechte im Zusammenhang mit der Nutzung dieser Webseite lesen Sie bitte die Datenschutzerklärung.</p>
 </x-sections.legal>
 

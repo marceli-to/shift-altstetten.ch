@@ -34,7 +34,7 @@
   </div>
 
   <div class="w-full md:col-span-12 flex items-end">
-    <x-buttons.primary href="javascript:;" class="js-btn-reset py-8! px-10! text-xxs!" :icon="false">
+    <x-buttons.primary href="javascript:;" title="Filter zurücksetzen" class="js-btn-reset py-8! px-10! text-xxs!" :icon="false">
       Filter zurücksetzen
     </x-buttons.primary>
   </div>

@@ -4,7 +4,7 @@
   class="fixed inset-0 z-50 flex items-center justify-center w-full h-dvh bg-yellow-500 md:!hidden">
 
   @if (!request()->routeIs('page.project'))
-    <a href="{{ route('page.project') }}" class="fixed top-16 left-24 text-yellow-500! ">
+    <a href="{{ route('page.project') }}" aria-label="Zur Startseite" class="fixed top-16 left-24 text-yellow-500! ">
       <x-icons.logo class="w-66 h-auto" />
     </a>
   @endif

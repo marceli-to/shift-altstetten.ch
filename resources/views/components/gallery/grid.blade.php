@@ -9,6 +9,7 @@
       href="{{ $image }}.jpg"
       target="_blank"
       rel="noopener"
+      aria-label="Bild in voller Grösse öffnen"
       class="block relative aspect-square overflow-hidden group">
       <picture class="block w-full h-full">
         <source srcset="{{ $image }}.avif" type="image/avif">

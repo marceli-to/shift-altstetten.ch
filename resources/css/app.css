@@ -6,6 +6,10 @@
 @import './iso.css';
 @import './spacing.css';
 
+@theme {
+  --container-page: 100rem;
+}
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';  
