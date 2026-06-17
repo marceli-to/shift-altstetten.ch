@@ -12,7 +12,7 @@
     id="{{ $id }}"
     name="{{ $name ?? $id }}"
     aria-label="{{ $label ?? '' }}"
-    class="block w-full cursor-pointer appearance-none bg-cocoa h-50 lg:h-46 px-10 font-bold outline-none transition {{ $accent === 'sky' ? 'text-sky' : 'text-blush' }}">
+    {{ $attributes->merge(['class' => 'block w-full cursor-pointer appearance-none bg-cocoa h-50 lg:h-46 px-10 font-bold outline-none transition ' . ($accent === 'sky' ? 'text-sky' : 'text-blush')]) }}>
     @foreach($options as $value => $text)
       <option value="{{ $value }}">{{ $text }}</option>
     @endforeach
