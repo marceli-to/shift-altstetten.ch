@@ -7,7 +7,7 @@
 
     <x-layout.inner>
 
-      <x-headings.h1 class="font-bold text-[30px] md:text-[40px] mb-10">
+      <x-headings.h1>
         Kontakt
       </x-headings.h1>
 
