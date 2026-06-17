@@ -11,6 +11,14 @@
     '/img/shift-bild-umgebung-04',
     '/img/shift-bild-umgebung-05',
   ];
+
+  $extras = [
+    ['type' => 'Tiefgaragen-Parkplatz', 'price' => 'CHF 130'],
+    ['type' => 'E-Ladestation', 'price' => 'CHF 170'],
+    ['type' => 'Motorrad-Parkplatz', 'price' => 'CHF 40'],
+    ['type' => 'Lagerraum', 'price' => 'CHF 450'],
+    ['type' => 'Hobbyraum', 'price' => 'CHF 450'],
+  ];
 @endphp
 
 <x-layout.section class="bg-sky">
@@ -68,8 +76,11 @@
 
 </x-layout.section>
 
-  <!--
-  <x-objects.wrapper :apartments="$apartments" :buildings="$buildings" :filterOptions="$filterOptions" :labels="$labels" />
-  -->
+<x-layout.section class="py-40 md:py-60">
+  <x-layout.inner>
+    <x-headings.h2 class="mb-20 md:mb-30">Angebot Gewerbe</x-headings.h2>
+    <x-objects.wrapper :apartments="$apartments" :filterOptions="$filterOptions" accent="sky" :extras="$extras" />
+  </x-layout.inner>
+</x-layout.section>
 
 @endsection

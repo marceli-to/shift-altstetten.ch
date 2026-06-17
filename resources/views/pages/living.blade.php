@@ -11,6 +11,12 @@
     '/img/shift-bild-umgebung-04',
     '/img/shift-bild-umgebung-05',
   ];
+
+  $extras = [
+    ['type' => 'Tiefgaragen-Parkplatz', 'price' => 'CHF 130'],
+    ['type' => 'E-Ladestation', 'price' => 'CHF 170'],
+    ['type' => 'Motorrad-Parkplatz', 'price' => 'CHF 40'],
+  ];
 @endphp
 
 <x-layout.section class="bg-blush">
@@ -76,8 +82,16 @@
 
 </x-layout.section>
 
-  <!--
-  <x-objects.wrapper :apartments="$apartments" :buildings="$buildings" :filterOptions="$filterOptions" :labels="$labels" />
-  -->
-
+<x-layout.section class="py-40 md:py-60">
+  <x-layout.inner>
+    <x-headings.h2 class="mb-20 md:mb-30">Angebot Wohnen</x-headings.h2>
+    <p class="mb-30 md:mb-50 max-w-[640px]">
+      Je nach Geschoss entfalten die Räume ihren eigenen Charakter:<br>
+      Unten das echte Loft – weit, offen, beeindruckend.<br>
+      Weiter oben eine ruhigere, fein proportionierte Wohnqualität.<br>
+      Und ganz oben: ein Wohnerlebnis über den Dächern der Stadt.
+    </p>
+    <x-objects.wrapper :apartments="$apartments" :filterOptions="$filterOptions" accent="blush" :extras="$extras" />
+  </x-layout.inner>
+</x-layout.section>
 @endsection

@@ -1,22 +1,21 @@
-@props(['id', 'label', 'name' => null, 'options' => []])
+@props(['id', 'label' => null, 'name' => null, 'options' => [], 'accent' => 'blush'])
 
-<div class="w-full">
+@php
+  $accentText = $accent === 'sky' ? 'text-sky' : 'text-blush';
+@endphp
 
-  <div class="relative">
-    <label for="{{ $id }}" class="pointer-events-none absolute left-20 md:left-25 top-10 z-10 text-md md:text-xl font-medium uppercase">
-      {{ $label }}
-    </label>
+<div class="relative w-full">
 
-    <select
-      id="{{ $id }}"
-      name="{{ $name ?? $id }}"
-      {{ $attributes->merge(['class' => 'block w-full appearance-none rounded-full border border-cocoa px-20 md:px-25 pb-10 pt-30 md:pt-35 text-sm md:text-lg text-cocoa outline-none transition']) }}>
-      @foreach($options as $value => $text)
-        <option value="{{ $value }}">{{ $text }}</option>
-      @endforeach
-    </select>
+  <select
+    id="{{ $id }}"
+    name="{{ $name ?? $id }}"
+    @if($label) aria-label="{{ $label }}" @endif
+    {{ $attributes->merge(['class' => 'block w-full cursor-pointer appearance-none bg-cocoa py-14 pl-20 pr-44 text-md md:text-lg font-bold uppercase outline-none transition ' . $accentText]) }}>
+    @foreach($options as $value => $text)
+      <option value="{{ $value }}" class="bg-white normal-case text-cocoa">{{ $text }}</option>
+    @endforeach
+  </select>
 
-    <x-icons.chevron-down class="pointer-events-none absolute right-20 md:right-16 top-1/2 w-24 h-24 md:w-32 md:h-32 shrink-0 -translate-y-1/2 text-cocoa" />
-    
-  </div>
+  <x-icons.chevron-down class="pointer-events-none absolute right-14 top-1/2 w-24 h-24 shrink-0 -translate-y-1/2 {{ $accentText }}" />
+
 </div>

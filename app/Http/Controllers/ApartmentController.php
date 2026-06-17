@@ -22,13 +22,10 @@ class ApartmentController extends Controller
   private function render(string $view, callable $filter)
   {
     $apartments = (new GetData)->execute()->filter($filter)->values();
-    $buildings = $apartments->groupBy(fn ($o) => $o['building']['building_title'] ?? '–')->sortKeys();
 
     return view("pages.$view", [
       'apartments' => $apartments,
-      'buildings' => $buildings,
       'filterOptions' => $this->filterOptions($apartments),
-      'labels' => [],
     ]);
   }
 

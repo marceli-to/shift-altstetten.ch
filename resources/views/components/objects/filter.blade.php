@@ -1,42 +1,55 @@
-@props(['options' => []])
+@props(['options' => [], 'accent' => 'blush'])
 
-<div class="flex flex-col gap-15 md:grid md:grid-cols-12 md:gap-20 md:max-w-4xl">
+@php
+  $accentBg = $accent === 'sky' ? 'bg-sky' : 'bg-blush';
 
-  <div class="md:col-span-4">
+  // Reuse the data-driven options, but relabel the default ("Alle") entry per
+  // dropdown so the closed select reads as a self-explanatory placeholder.
+  $availability = collect($options['availability'] ?? [])->replace(['NULL' => 'Alle Wohnungen'])->all();
+  $rooms = collect($options['rooms'] ?? [])->replace(['NULL' => 'Alle Zimmer'])->all();
+  $floors = collect($options['floors'] ?? [])->replace(['NULL' => 'Alle Etagen'])->all();
+@endphp
+
+<div class="flex flex-col gap-15 md:grid md:grid-cols-12 md:gap-20">
+
+  <div class="md:col-span-3">
     <x-forms.select
       id="availability"
       label="Verfügbarkeit"
       class="js-filter-attribute"
       data-filterType="object-state"
-      :options="$options['availability'] ?? []" />
+      :options="$availability"
+      :accent="$accent" />
   </div>
 
-  <div class="flex gap-15 md:col-span-8 md:grid md:grid-cols-2 md:gap-20">
-
-    <div class="w-full md:w-auto">
+  <div class="flex gap-15 md:contents">
+    <div class="w-full md:col-span-3">
       <x-forms.select
         id="rooms"
         label="Zimmer"
         class="js-filter-attribute"
         data-filterType="object-rooms"
-        :options="$options['rooms'] ?? []" />
+        :options="$rooms"
+        :accent="$accent" />
     </div>
 
-    <div class="w-full md:w-auto">
+    <div class="w-full md:col-span-3">
       <x-forms.select
         id="floor"
         label="Etage"
         class="js-filter-attribute"
         data-filterType="object-floor"
-        :options="$options['floors'] ?? []" />
+        :options="$floors"
+        :accent="$accent" />
     </div>
-
   </div>
 
-  <div class="w-full md:col-span-12 flex items-end">
-    <x-buttons.primary href="javascript:;" title="Filter zurücksetzen" class="js-btn-reset py-8! px-10! text-xxs!" :icon="false">
+  <div class="md:col-span-3">
+    <button
+      type="button"
+      class="js-btn-reset block w-full px-20 py-14 text-left text-md md:text-lg font-bold uppercase text-cocoa transition-opacity hover:opacity-80 {{ $accentBg }}">
       Filter zurücksetzen
-    </x-buttons.primary>
+    </button>
   </div>
 
 </div>
