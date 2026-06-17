@@ -27,7 +27,7 @@
       title="Kontakt" />
 
   </ul>
-  <x-bars class="hidden 2xl:flex h-94 ml-40 gap-x-20" :count="6" width="w-10" />
+  <x-bars class="hidden 2xl:flex h-94 ml-40 gap-x-20" :color="request()->routeIs('page.working') ? 'bg-sky' : 'bg-blush'" :count="6" width="w-10" />
 
 </nav>
 

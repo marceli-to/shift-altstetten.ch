@@ -6,7 +6,7 @@
           href="{{ route('page.project') }}" 
           aria-label="Zur Startseite" 
           class="w-170 h-auto block">
-          <x-icons.logo class="w-full h-auto text-blush" />
+          <x-icons.logo class="w-full h-auto {{ request()->routeIs('page.working') ? 'text-sky' : 'text-blush' }}" />
         </a>
       </div>
       <div class="pl-20">
@@ -20,7 +20,7 @@
   <a 
     href="{{ route('page.project') }}" 
     aria-label="Zur Startseite">
-    <x-icons.logo class="w-120 h-auto text-blush" />
+    <x-icons.logo class="w-120 h-auto {{ request()->routeIs('page.working') ? 'text-sky' : 'text-blush' }}" />
   </a>  
   <x-menu.mobile.button />
 </header>

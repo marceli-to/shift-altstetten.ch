@@ -1,20 +1,9 @@
 @props([
-  'variant' => null,
-  'bg' => 'bg-white',
   'class' => '',
   'reverse' => false,
 ])
 
-@php
-$background = match($variant) {
-  'cocoa' => 'bg-cocoa',
-  'pink' => 'bg-blush',
-  'blue' => 'bg-sky',
-  default => $bg,
-};
-@endphp
-
-<x-layout.section :class="$background . ' ' . $class">
+<x-layout.section :class="$class">
 
   <x-layout.inner class="!px-0 !max-w-none">
 
