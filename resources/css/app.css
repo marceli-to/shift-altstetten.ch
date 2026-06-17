@@ -1,3 +1,8 @@
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';  
+@source '../**/*.js';
+
 @import 'tailwindcss';
 
 @import './colors.css';
@@ -10,25 +15,24 @@
   --container-page: 100rem;
 }
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';  
-@source '../**/*.js';
-
-strong {
-  @apply font-bold;
+@utility ml-page-gutter {
+  margin-left: calc(max(0px, (100vw - var(--container-page)) / 2) + 20px);
 }
 
 [x-cloak] {
   display: none !important;
 }
 
+strong {
+  @apply font-bold;
+}
+
 p:not(:last-of-type){
-  @apply mb-16 md:mb-24;
+  @apply mb-16 md:mb-24 2xl:mb-32;
 }
 
 main ul {
-  @apply mb-16 md:mb-24 pl-20;
+  @apply mb-16 md:mb-24 2xl:mb-32 pl-20;
 }
 
 main li {

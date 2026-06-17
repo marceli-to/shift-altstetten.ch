@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- mobile view -->
-<section class="min-h-[70vh] md:hidden">
+<x-layout.section class="min-h-[70vh] md:hidden">
 
   <div class="relative">
     <img src="/img/shift-bild-gebaeude-mobile.jpg" class="h-full w-full object-contain" />
@@ -61,18 +61,24 @@
   </div>
 
   <div class="bg-cocoa text-blush px-20">
-    <div class="flex justify-between gap-x-40 pb-20">
+    <div class="flex justify-between gap-x-100 pb-20">
       <div class="mt-40">
         <h2 class="text-[20px] font-bold text-balance">
-          Entdecken Sie das Angebot
+          Entdecken Sie<br>unser Angebot
         </h2>
       </div>
       <div class="flex gap-x-20">
-        <a href="" class="flex gap-x-5 h-auto">
+        <a 
+          href="{{ route('page.living') }}" 
+          class="flex gap-x-5 h-auto" 
+          aria-label="Zu den Wohnungen">
           <span class="w-5 bg-blush rounded-b-full"></span>
           <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 text-[20px]">Wohnen</span>
         </a>
-        <a href="" class="flex gap-x-5 h-auto">
+        <a 
+          href="{{ route('page.working') }}" 
+          class="flex gap-x-5 h-auto" 
+          aria-label="Zu den Gewerberäumen">
           <span class="w-5 bg-blush rounded-b-full"></span>
           <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 text-[20px]">Gewerbe</span>
         </a>
@@ -98,11 +104,13 @@
     ]" />
   </div>
 
-</section>
+</x-layout.section>
 
 <!-- desktop view -->
-<section class="hidden md:block">
-  <div class="relative">
+<div class="hidden md:block">
+
+  <x-layout.section class="relative">
+
     <img src="/img/shift-bild-gebaeude.jpg" class="w-full h-[80vh] object-cover" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%]"></div>
 
@@ -138,7 +146,93 @@
       </div>
 
     </div>
-  </div>
-</section>
 
+  </x-layout.section>
+
+  <x-layout.split>
+
+    <div class="text-[22px]">
+      <p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>
+      <p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>
+    </div>
+
+    <x-slot:aside>
+      <x-gallery.carousel name="room-gallery" :images="[
+        '/img/shift-bild-umgebung-01',
+        '/img/shift-bild-umgebung-02',
+        '/img/shift-bild-umgebung-03',
+        '/img/shift-bild-umgebung-04',
+        '/img/shift-bild-umgebung-05',
+      ]" />
+    </x-slot:aside>
+
+  </x-layout.split>
+
+  <x-layout.section class="py-80 2xl:py-100">
+
+    <x-layout.inner>
+
+      <h2 class="font-bold text-[40px] mb-10">
+        Raumkonzepte mit industriellem Charme
+      </h2>
+
+      <x-layout.article class="text-[22px]">
+        <p>Mit dem Projekt SHIFT entsteht ein vollständig saniertes Wohn- und Geschäftshaus mit gemischter Nutzung, das den Wandel moderner Wohn- und Arbeitsformen aufgreift. Flexible Raumkonzepte ermöglichen vielfältige Nutzungen und passen sich individuellen Bedürfnissen an.</p>
+        <p>Das ehemalige Industriegebäude verbindet seine Geschichte mit klarer architektonischer Gestaltung und hoher baulicher Qualität. Durch die behutsame Umnutzung entstehen hohe, offene Räume mit unverwechselbarem industriellem Charme und einer besonderen Loft-Atmosphäre.</p>
+        
+        <div class="mt-56 2xl:mt-72">
+          <div class="inline-flex justify-between items-end gap-x-80 2xl:gap-x-100 pb-20">
+            <div class="bg-blue-100">
+              <h2 class="text-[22px] font-bold text-balance">
+                Entdecken Sie<br>unser Angebot
+              </h2>
+            </div>
+            <div class="flex gap-x-20">
+              <a 
+                href="{{ route('page.living') }}" 
+                class="flex gap-x-5 h-auto" 
+                aria-label="Zu den Wohnungen">
+                <span class="w-5 bg-cocoa rounded-t-full"></span>
+                <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 text-[22px]">Wohnen</span>
+              </a>
+              <a 
+                href="{{ route('page.working') }}" 
+                class="flex gap-x-5 h-auto" 
+                aria-label="Zu den Gewerberäumen">
+                <span class="w-5 bg-cocoa rounded-t-full"></span>
+                <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 text-[22px]">Gewerbe</span>
+              </a>
+            </div>
+          </div>
+        </div>      
+      
+      </x-layout.article>
+
+    </x-layout.inner>
+
+  </x-layout.section>
+
+  <x-layout.split :reverse="true">
+
+    <h2 class="font-bold text-[40px] mb-10">
+      Kunst am Bau
+    </h2>
+
+    <div class="text-[22px]">
+      <p>Gestalterische Elemente prägen SHIFT über die Architektur hinaus und verleihen dem Projekt zusätzliche Ausdruckskraft.</p>
+    </div>
+
+    <x-slot:aside>
+      <x-gallery.carousel name="room-gallery" :images="[
+        '/img/shift-bild-umgebung-01',
+        '/img/shift-bild-umgebung-02',
+        '/img/shift-bild-umgebung-03',
+        '/img/shift-bild-umgebung-04',
+        '/img/shift-bild-umgebung-05',
+      ]" />
+    </x-slot:aside>
+
+  </x-layout.split>
+
+</div>
 @endsection
