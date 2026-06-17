@@ -2,10 +2,10 @@
 @section('content')
 
 <!-- mobile view -->
-<x-layout.section class="min-h-[70vh] md:hidden">
+<x-layout.section class="md:hidden">
 
   <div class="relative">
-    <img src="/img/shift-bild-gebaeude-mobile.jpg" class="h-full w-full object-contain" />
+    <img src="/img/shift-bild-gebaeude-mobile.jpg" class="h-[calc(100svh-80px)] w-full object-cover" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%] opacity-60"></div>
     <h1 class="absolute z-30 bottom-60 left-20 flex flex-col text-white">
       <span class="font-bold text-[45px]">live & work</span>
@@ -111,7 +111,7 @@
 
   <x-layout.section class="relative">
 
-    <img src="/img/shift-bild-gebaeude.jpg" class="w-full h-[80vh] object-cover" />
+    <img src="/img/shift-bild-gebaeude.jpg" class="w-full h-[calc(100vh-94px)] object-cover" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%]"></div>
 
     <div class="absolute z-30 bottom-60 px-20 w-full flex flex-col gap-y-100">
@@ -224,11 +224,12 @@
 
     <x-slot:aside>
       <x-gallery.carousel name="room-gallery" :images="[
-        '/img/shift-bild-umgebung-01',
-        '/img/shift-bild-umgebung-02',
-        '/img/shift-bild-umgebung-03',
-        '/img/shift-bild-umgebung-04',
-        '/img/shift-bild-umgebung-05',
+        '/img/shift-bild-kunst-am-bau-01',
+        '/img/shift-bild-kunst-am-bau-02',
+        '/img/shift-bild-kunst-am-bau-03',
+        '/img/shift-bild-kunst-am-bau-04',
+        '/img/shift-bild-kunst-am-bau-05',
+        '/img/shift-bild-kunst-am-bau-06',
       ]" />
     </x-slot:aside>
 
