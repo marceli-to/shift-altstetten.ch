@@ -3,7 +3,7 @@
 @section('meta_description', 'Datenschutzerklärung der Pappelstrasse 2/4 in Dietlikon – Informationen zur Datenverarbeitung, Cookies und Ihren Rechten.')
 @section('content')
 
-<x-sections.legal title="Datenschutzerklärung" class="max-w-3xl">
+<x-blocks.legal title="Datenschutzerklärung" class="max-w-3xl">
   <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
 
   <x-headings.h2 class="text-4xl! md:text-7xl!">
@@ -97,6 +97,6 @@
   <p>Die Verarbeitung Ihrer personenbezogenen Daten im Zusammenhang mit Adobe Fonts erfolgt zum Zweck der Darstellung der Schriftarten auf dieser Webseite und zur Gewährleistung einer einheitlichen und ansprechenden visuellen Gestaltung. Die Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO, da wir ein berechtigtes Interesse an der visuellen Gestaltung und Benutzerfreundlichkeit unserer Webseite haben.</p>
   <p>Weitere Informationen zur Datenverarbeitung durch Adobe Fonts finden Sie in der Datenschutzerklärung von Adobe Fonts <x-links.styled href="https://www.adobe.com/de/privacy/policies/adobe-fonts.html" target="_blank" label="Datenschutzerklärung von Adobe Fonts">hier</x-links.styled>.</p>
   <p>Für weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten und zur Ausübung Ihrer Rechte im Zusammenhang mit der Nutzung dieser Webseite lesen Sie bitte die Datenschutzerklärung.</p>
-</x-sections.legal>
+</x-blocks.legal>
 
 @endsection

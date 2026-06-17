@@ -3,7 +3,7 @@
 @section('meta_description', 'Impressum der Pappelstrasse 2/4 in Dietlikon – Angaben zum Betreiber, Design und Entwicklung.')
 @section('content')
 
-<x-sections.legal title="Impressum">
+<x-blocks.legal title="Impressum">
 
   <p>
     <strong>Verantwortlich</strong><br>
@@ -32,6 +32,6 @@
       marceli.to
     </x-links.styled>
   </p>
-</x-sections.legal>
+</x-blocks.legal>
 
 @endsection

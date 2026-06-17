@@ -1,5 +1,6 @@
 @extends('app')
 @section('meta_title', 'Lage')
+@section('meta_description', 'Die Liegenschaft an der Badenerstrasse 587–589 liegt mitten im lebendigen Zürcher Quartier Altstetten – und verbindet zentrale Lage mit einer Leichtigkeit im Alltag, die man sofort spürt.')
 @section('content')
 
 @php
@@ -54,16 +55,16 @@
 
   </x-layout.split>
 
-  <x-layout.section class="py-60 md:py-100">
-    <x-layout.inner>
+  <x-layout.section class="py-40 md:py-100">
+    <x-layout.inner class="px-0! md:px-20!">
 
-      <x-headings.h2 class="mb-30! md:mb-40!">
+      <x-headings.h2 class="mb-30! md:mb-40! px-20 md:px-0!">
         Mobilität und Anschlüsse
       </x-headings.h2>
 
-      <div class="flex flex-col gap-y-40 md:gap-y-60">
-        <x-sections.distance-table :columns="$transitTable['columns']" :rows="$transitTable['rows']" />
-        <x-sections.distance-table :columns="$localTable['columns']" :rows="$localTable['rows']" />
+      <div class="flex flex-col gap-y-30">
+        <x-blocks.distance-table :columns="$transitTable['columns']" :rows="$transitTable['rows']" />
+        <x-blocks.distance-table :columns="$localTable['columns']" :rows="$localTable['rows']" />
       </div>
 
     </x-layout.inner>

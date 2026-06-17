@@ -51,7 +51,7 @@
       :height="614"
       class="h-[calc(100svh-80px)] w-full" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%] opacity-60"></div>
-    <x-sections.hero-title class="absolute z-30 bottom-60 left-20" />
+    <x-blocks.hero-title class="absolute z-30 bottom-60 left-20" />
     <x-bars class="absolute z-30 -bottom-62 right-20 h-194 gap-x-10" :count="6" :rounded="true" width="w-5" />
   </div>
 
@@ -63,7 +63,7 @@
 
   <div class="bg-cocoa text-blush px-20 flex justify-between">
     <div class="py-40">
-      <x-sections.stats variant="mobile" :stats="$stats" />
+      <x-blocks.stats variant="mobile" :stats="$stats" />
     </div>
     <x-bars class="h-auto gap-x-10" :count="3" width="w-5" />
   </div>
@@ -82,7 +82,7 @@
   </div>
 
   <div class="bg-cocoa text-blush px-20">
-    <x-sections.discover
+    <x-blocks.discover
       class="flex gap-x-100"
       heading-class="mt-40"
       bar-color="bg-blush"
@@ -121,12 +121,12 @@
     <div class="absolute z-30 bottom-60 px-20 w-full flex flex-col gap-y-100">
 
       <div class="max-w-page mx-auto w-full">
-        <x-sections.hero-title title-class="text-[100px] leading-none" subtitle-class="text-[24px]" />
+        <x-blocks.hero-title title-class="text-[100px] leading-none" subtitle-class="text-[24px]" />
       </div>
 
       <div class="max-w-page mx-auto w-full text-blush flex justify-between">
         <div class="w-full max-w-[80rem]">
-          <x-sections.stats variant="desktop" :stats="$stats" />
+          <x-blocks.stats variant="desktop" :stats="$stats" />
         </div>
       </div>
 
@@ -162,7 +162,7 @@
         @endforeach
 
         <div class="mt-56 2xl:mt-72">
-          <x-sections.discover
+          <x-blocks.discover
             class="inline-flex items-end gap-x-80 2xl:gap-x-100"
             bar-color="bg-cocoa"
             rounded="top"
