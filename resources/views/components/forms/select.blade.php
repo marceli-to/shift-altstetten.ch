@@ -1,21 +1,23 @@
-@props(['id', 'label' => null, 'name' => null, 'options' => [], 'accent' => 'blush'])
-
-@php
-  $accentText = $accent === 'sky' ? 'text-sky' : 'text-blush';
-@endphp
+@props([
+  'id', 
+  'label' => null, 
+  'name' => null, 
+  'options' => [], 
+  'accent' => 'blush'
+])
 
 <div class="relative w-full">
 
   <select
     id="{{ $id }}"
     name="{{ $name ?? $id }}"
-    @if($label) aria-label="{{ $label }}" @endif
-    {{ $attributes->merge(['class' => 'block w-full cursor-pointer appearance-none bg-cocoa py-14 pl-20 pr-44 text-md md:text-lg font-bold uppercase outline-none transition ' . $accentText]) }}>
+    aria-label="{{ $label ?? '' }}"
+    class="block w-full cursor-pointer appearance-none bg-cocoa h-50 lg:h-46 px-10 font-bold outline-none transition {{ $accent === 'sky' ? 'text-sky' : 'text-blush' }}">
     @foreach($options as $value => $text)
-      <option value="{{ $value }}" class="bg-white normal-case text-cocoa">{{ $text }}</option>
+      <option value="{{ $value }}">{{ $text }}</option>
     @endforeach
   </select>
 
-  <x-icons.chevron-down class="pointer-events-none absolute right-14 top-1/2 w-24 h-24 shrink-0 -translate-y-1/2 {{ $accentText }}" />
+  <x-icons.chevron-down class="pointer-events-none absolute right-10 top-1/2 w-16 h-auto shrink-0 -translate-y-1/2 {{ $accent === 'sky' ? 'text-sky' : 'text-blush' }}" />
 
 </div>

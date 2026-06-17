@@ -4,5 +4,5 @@
   :aria-label="menu ? 'Menü schliessen' : 'Menü öffnen'"
   :aria-expanded="menu"
   class="w-40 h-20 flex items-center justify-center cursor-pointer md:hidden {{ $class ?? '' }}">
-  <x-icons.burger class="w-full h-auto text-blush" />
+  <x-icons.burger class="w-full h-auto {{ request()->routeIs('page.working') ? 'text-sky' : 'text-blush' }}" />
 </button>
