@@ -1,107 +1,106 @@
 @extends('app')
 @section('content')
 
+@php
+  $surroundingImages = [
+    '/img/shift-bild-umgebung-01',
+    '/img/shift-bild-umgebung-02',
+    '/img/shift-bild-umgebung-03',
+    '/img/shift-bild-umgebung-04',
+    '/img/shift-bild-umgebung-05',
+  ];
+  $artworkImages = [
+    '/img/shift-bild-kunst-am-bau-01',
+    '/img/shift-bild-kunst-am-bau-02',
+    '/img/shift-bild-kunst-am-bau-03',
+    '/img/shift-bild-kunst-am-bau-04',
+    '/img/shift-bild-kunst-am-bau-05',
+    '/img/shift-bild-kunst-am-bau-06',
+  ];
+  $stats = [
+    ['number' => 24, 'label' => "moderne, grosszügige\nLoftwohnungen"],
+    ['number' => 12, 'label' => "vollständig\nausgebaute Kleinbüros"],
+    ['number' => 10, 'label' => "beheizte Lager-/\nHobbyräume mit Tageslicht"],
+  ];
+
+  $introText = [
+    '<p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>',
+    '<p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>',
+  ];
+
+  $conceptTitle = 'Raumkonzepte mit industriellem Charme';
+  $conceptText = [
+    '<p>Mit dem Projekt SHIFT entsteht ein vollständig saniertes Wohn- und Geschäftshaus mit gemischter Nutzung, das den Wandel moderner Wohn- und Arbeitsformen aufgreift. Flexible Raumkonzepte ermöglichen vielfältige Nutzungen und passen sich individuellen Bedürfnissen an.</p>',
+    '<p>Das ehemalige Industriegebäude verbindet seine Geschichte mit klarer architektonischer Gestaltung und hoher baulicher Qualität. Durch die behutsame Umnutzung entstehen hohe, offene Räume mit unverwechselbarem industriellem Charme und einer besonderen Loft-Atmosphäre.</p>',
+  ];
+
+  $artTitle = 'Kunst am Bau';
+  $artText = [
+    '<p>Gestalterische Elemente prägen SHIFT über die Architektur hinaus und verleihen dem Projekt zusätzliche Ausdruckskraft.</p>',
+  ];
+@endphp
+
 <!-- mobile view -->
 <x-layout.section class="md:hidden">
 
   <div class="relative">
-    <img src="/img/shift-bild-gebaeude-mobile.jpg" class="h-[calc(100svh-80px)] w-full object-cover" />
+    <x-media.picture
+      src="/img/shift-bild-gebaeude-mobile"
+      alt="Shift Altstetten Gebäude"
+      :width="392"
+      :height="614"
+      class="h-[calc(100svh-80px)] w-full" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%] opacity-60"></div>
-    <h1 class="absolute z-30 bottom-60 left-20 flex flex-col text-white">
-      <span class="font-bold text-[45px]">live & work</span>
-      <span class="text-[20px]">Zürich-Altstetten</span>
-    </h1>
+    <x-sections.hero-title class="absolute z-30 bottom-60 left-20" />
     <x-bars class="absolute z-30 -bottom-62 right-20 h-194 gap-x-10" :count="6" :rounded="true" width="w-5" />
   </div>
 
   <div class="px-20 py-60 text-[20px]">
-    <p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>
-    <p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>
+    @foreach($introText as $line)
+      {!! $line !!}
+    @endforeach
   </div>
 
   <div class="bg-cocoa text-blush px-20 flex justify-between">
     <div class="py-40">
-      <h2 class="font-bold text-[20px] mb-30">
-        Bis Sommer 2027 entstehen
-      </h2>
-      <div class="flex flex-col gap-y-20">
-        <div class="flex items-center gap-x-12">
-          <span class="text-[45px] font-bold w-56 text-right">24</span>
-          <span class="text-[18px]">moderne, grosszügige Loftwohnungen</span>
-        </div>
-        <div class="flex items-center gap-x-12">
-          <span class="text-[45px] font-bold w-56 text-right">12</span>
-          <span class="text-[18px]">vollständig ausgebaute Kleinbüros</span>
-        </div>
-        <div class="flex items-center gap-x-12">
-          <span class="text-[45px] font-bold w-56 text-right">10</span>
-          <span class="text-[18px]">beheizte Lager-/ Hobbyräume mit Tageslicht</span>
-        </div>
-      </div>
+      <x-sections.stats variant="mobile" :stats="$stats" />
     </div>
     <x-bars class="h-auto gap-x-10" :count="3" width="w-5" />
   </div>
 
   <div>
-    <x-gallery.carousel name="room-gallery" :images="[
-      '/img/shift-bild-umgebung-01',
-      '/img/shift-bild-umgebung-02',
-      '/img/shift-bild-umgebung-03',
-      '/img/shift-bild-umgebung-04',
-      '/img/shift-bild-umgebung-05',
-    ]" />
+    <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
   </div>
 
   <div class="px-20 pt-60 pb-40 text-[20px]">
-    <h2 class="font-bold text-[30px] leading-[1.2] mb-10">
-      Raumkonzepte mit industriellem Charme
-    </h2>
-    <p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>
-    <p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>
+    <x-headings.h2>
+      {{ $conceptTitle }}
+    </x-headings.h2>
+    @foreach($conceptText as $line)
+      {!! $line !!}
+    @endforeach
   </div>
 
   <div class="bg-cocoa text-blush px-20">
-    <div class="flex justify-between gap-x-100 pb-20">
-      <div class="mt-40">
-        <h2 class="text-[20px] font-bold text-balance">
-          Entdecken Sie<br>unser Angebot
-        </h2>
-      </div>
-      <div class="flex gap-x-20">
-        <a 
-          href="{{ route('page.living') }}" 
-          class="flex gap-x-5 h-auto" 
-          aria-label="Zu den Wohnungen">
-          <span class="w-5 bg-blush rounded-b-full"></span>
-          <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 text-[20px]">Wohnen</span>
-        </a>
-        <a 
-          href="{{ route('page.working') }}" 
-          class="flex gap-x-5 h-auto" 
-          aria-label="Zu den Gewerberäumen">
-          <span class="w-5 bg-blush rounded-b-full"></span>
-          <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 text-[20px]">Gewerbe</span>
-        </a>
-      </div>
-    </div>
+    <x-sections.discover
+      class="flex gap-x-100"
+      heading-class="mt-40"
+      bar-color="bg-blush"
+      rounded="bottom"
+      text-size="text-[20px]" />
   </div>
 
   <div class="px-20 pt-60 pb-40 text-[20px]">
-    <h2 class="font-bold text-[30px] leading-[1.2] mb-10">
-      Kunst am Bau
-    </h2>
-    <p>Gestalterische Elemente prägen SHIFT über die Architektur hinaus und verleihen dem Projekt zusätzliche Ausdruckskraft.</p>
+    <x-headings.h2>
+      {{ $artTitle }}
+    </x-headings.h2>
+    @foreach($artText as $line)
+      {!! $line !!}
+    @endforeach
   </div>
 
   <div>
-    <x-gallery.carousel name="room-gallery" :images="[
-      '/img/shift-bild-kunst-am-bau-01',
-      '/img/shift-bild-kunst-am-bau-02',
-      '/img/shift-bild-kunst-am-bau-03',
-      '/img/shift-bild-kunst-am-bau-04',
-      '/img/shift-bild-kunst-am-bau-05',
-      '/img/shift-bild-kunst-am-bau-06',
-    ]" />
+    <x-gallery.carousel name="room-gallery" :images="$artworkImages" />
   </div>
 
 </x-layout.section>
@@ -111,37 +110,23 @@
 
   <x-layout.section class="relative">
 
-    <img src="/img/shift-bild-gebaeude.jpg" class="w-full h-[calc(100vh-94px)] object-cover" />
+    <x-media.picture
+      src="/img/shift-bild-gebaeude"
+      alt="Shift Altstetten Gebäude"
+      :width="1920"
+      :height="1080"
+      class="w-full h-[calc(100vh-94px)]" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%]"></div>
 
     <div class="absolute z-30 bottom-60 px-20 w-full flex flex-col gap-y-100">
 
       <div class="max-w-page mx-auto w-full">
-        <h1 class="flex flex-col text-white">
-          <span class="font-bold text-[100px] leading-none">live & work</span>
-          <span class="text-[24px]">Zürich-Altstetten</span>
-        </h1>
+        <x-sections.hero-title title-class="text-[100px] leading-none" subtitle-class="text-[24px]" />
       </div>
 
       <div class="max-w-page mx-auto w-full text-blush flex justify-between">
         <div class="w-full max-w-[80rem]">
-          <h2 class="font-bold text-[22px] mb-20">
-            Bis Sommer 2027 entstehen
-          </h2>
-          <div class="w-full flex flex-wrap gap-40 lg:gap-x-60 lg:justify-between gap-y-20">
-            <div class="flex items-center gap-x-12">
-              <span class="text-[60px] font-bold w-70 text-right">24</span>
-              <span class="text-[22px] leading-[1.1]">moderne, grosszügige<br>Loftwohnungen</span>
-            </div>
-            <div class="flex items-center gap-x-12">
-              <span class="text-[60px] font-bold w-70 text-right">12</span>
-              <span class="text-[22px] leading-[1.1]">vollständig<br>ausgebaute Kleinbüros</span>
-            </div>
-            <div class="flex items-center gap-x-12">
-              <span class="text-[60px] font-bold w-70 text-right">10</span>
-              <span class="text-[22px] leading-[1.1]">beheizte Lager-/<br>Hobbyräume mit Tageslicht</span>
-            </div>
-          </div>
+          <x-sections.stats variant="desktop" :stats="$stats" />
         </div>
       </div>
 
@@ -152,18 +137,13 @@
   <x-layout.split>
 
     <div class="text-[22px]">
-      <p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>
-      <p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>
+      @foreach($introText as $line)
+        {!! $line !!}
+      @endforeach
     </div>
 
     <x-slot:aside>
-      <x-gallery.carousel name="room-gallery" :images="[
-        '/img/shift-bild-umgebung-01',
-        '/img/shift-bild-umgebung-02',
-        '/img/shift-bild-umgebung-03',
-        '/img/shift-bild-umgebung-04',
-        '/img/shift-bild-umgebung-05',
-      ]" />
+      <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
     </x-slot:aside>
 
   </x-layout.split>
@@ -172,39 +152,22 @@
 
     <x-layout.inner>
 
-      <h2 class="font-bold text-[40px] mb-10">
-        Raumkonzepte mit industriellem Charme
-      </h2>
+      <x-headings.h2>
+        {{ $conceptTitle }}
+      </x-headings.h2>
 
       <x-layout.article class="text-[22px]">
-        <p>Mit dem Projekt SHIFT entsteht ein vollständig saniertes Wohn- und Geschäftshaus mit gemischter Nutzung, das den Wandel moderner Wohn- und Arbeitsformen aufgreift. Flexible Raumkonzepte ermöglichen vielfältige Nutzungen und passen sich individuellen Bedürfnissen an.</p>
-        <p>Das ehemalige Industriegebäude verbindet seine Geschichte mit klarer architektonischer Gestaltung und hoher baulicher Qualität. Durch die behutsame Umnutzung entstehen hohe, offene Räume mit unverwechselbarem industriellem Charme und einer besonderen Loft-Atmosphäre.</p>
-        
+        @foreach($conceptText as $line)
+          {!! $line !!}
+        @endforeach
+
         <div class="mt-56 2xl:mt-72">
-          <div class="inline-flex justify-between items-end gap-x-80 2xl:gap-x-100 pb-20">
-            <div class="bg-blue-100">
-              <h2 class="text-[22px] font-bold text-balance">
-                Entdecken Sie<br>unser Angebot
-              </h2>
-            </div>
-            <div class="flex gap-x-20">
-              <a 
-                href="{{ route('page.living') }}" 
-                class="flex gap-x-5 h-auto" 
-                aria-label="Zu den Wohnungen">
-                <span class="w-5 bg-cocoa rounded-t-full"></span>
-                <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 text-[22px]">Wohnen</span>
-              </a>
-              <a 
-                href="{{ route('page.working') }}" 
-                class="flex gap-x-5 h-auto" 
-                aria-label="Zu den Gewerberäumen">
-                <span class="w-5 bg-cocoa rounded-t-full"></span>
-                <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 text-[22px]">Gewerbe</span>
-              </a>
-            </div>
-          </div>
-        </div>      
+          <x-sections.discover
+            class="inline-flex items-end gap-x-80 2xl:gap-x-100"
+            bar-color="bg-cocoa"
+            rounded="top"
+            text-size="text-[22px]" />
+        </div>
       
       </x-layout.article>
 
@@ -214,23 +177,18 @@
 
   <x-layout.split :reverse="true">
 
-    <h2 class="font-bold text-[40px] mb-10">
-      Kunst am Bau
-    </h2>
+    <x-headings.h2>
+      {{ $artTitle }}
+    </x-headings.h2>
 
     <div class="text-[22px]">
-      <p>Gestalterische Elemente prägen SHIFT über die Architektur hinaus und verleihen dem Projekt zusätzliche Ausdruckskraft.</p>
+      @foreach($artText as $line)
+        {!! $line !!}
+      @endforeach
     </div>
 
     <x-slot:aside>
-      <x-gallery.carousel name="room-gallery" :images="[
-        '/img/shift-bild-kunst-am-bau-01',
-        '/img/shift-bild-kunst-am-bau-02',
-        '/img/shift-bild-kunst-am-bau-03',
-        '/img/shift-bild-kunst-am-bau-04',
-        '/img/shift-bild-kunst-am-bau-05',
-        '/img/shift-bild-kunst-am-bau-06',
-      ]" />
+      <x-gallery.carousel name="room-gallery" :images="$artworkImages" />
     </x-slot:aside>
 
   </x-layout.split>

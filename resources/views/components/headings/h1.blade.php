@@ -1,3 +1,3 @@
-<h1 class="font-display font-bold uppercase tracking-wide text-cocoa uppercase text-6xl md:text-8xl text-pretty leading-[1.1] mb-12 md:mb-20 {{ $class ?? '' }}">
+<h1 {{ $attributes->merge(['class' => '']) }}>
   {{ $slot }}
 </h1>

@@ -1,3 +1,3 @@
-<h2 class="font-display font-bold uppercase tracking-wide text-cocoa uppercase text-6xl md:text-8xl text-pretty leading-[1.1] mb-12 md:mb-20 {{ $class ?? '' }}">
+<h2 {{ $attributes->merge(['class' => 'font-bold text-[30px] md:text-[40px] leading-[1.2] mb-10']) }}>
   {{ $slot }}
 </h2>
