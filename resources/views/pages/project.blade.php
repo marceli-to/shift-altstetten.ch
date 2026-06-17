@@ -55,7 +55,7 @@
     <x-bars class="absolute z-30 -bottom-62 right-20 h-194 gap-x-10" :count="6" :rounded="true" width="w-5" />
   </div>
 
-  <div class="px-20 py-60 text-[20px]">
+  <div class="px-20 py-60">
     @foreach($introText as $line)
       {!! $line !!}
     @endforeach
@@ -72,7 +72,7 @@
     <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
   </div>
 
-  <div class="px-20 pt-60 pb-40 text-[20px]">
+  <div class="px-20 pt-60 pb-40">
     <x-headings.h2>
       {{ $conceptTitle }}
     </x-headings.h2>
@@ -90,7 +90,7 @@
       text-size="text-[20px]" />
   </div>
 
-  <div class="px-20 pt-60 pb-40 text-[20px]">
+  <div class="px-20 pt-60 pb-40">
     <x-headings.h2>
       {{ $artTitle }}
     </x-headings.h2>
@@ -136,7 +136,7 @@
 
   <x-layout.split>
 
-    <div class="text-[22px]">
+    <div>
       @foreach($introText as $line)
         {!! $line !!}
       @endforeach
@@ -156,7 +156,7 @@
         {{ $conceptTitle }}
       </x-headings.h2>
 
-      <x-layout.article class="text-[22px]">
+      <x-layout.article>
         @foreach($conceptText as $line)
           {!! $line !!}
         @endforeach
@@ -181,7 +181,7 @@
       {{ $artTitle }}
     </x-headings.h2>
 
-    <div class="text-[22px]">
+    <div>
       @foreach($artText as $line)
         {!! $line !!}
       @endforeach

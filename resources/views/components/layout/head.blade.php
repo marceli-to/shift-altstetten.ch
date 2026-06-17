@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="view-transition" content="same-origin">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <title>@hasSection('meta_title')@yield('meta_title') – {{ $appName }}@else{{ $appName }}@endif</title>
 <meta name="description" content="@yield('meta_description', $defaultDescription)">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
