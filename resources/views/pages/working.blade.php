@@ -1,5 +1,6 @@
 @extends('app')
-@section('meta_title', 'Working')
+@section('meta_title', 'Arbeiten')
+@section('meta_description', 'Arbeiten mit urbanem Charakter an der Badenerstrasse 587–589 in Zürich Altstetten: ausgebaute Gewerbeflächen und Kleinbüros mit Parkettböden, Teeküchen und inspirierender Industriearchitektur.')
 @section('content')
 
 @php
@@ -42,8 +43,6 @@
           Kurzbaubeschrieb
       </x-links.styled>
     </p>
-
-
 
     <x-slot:aside>
       <x-gallery.carousel name="living-gallery" :images="$surroundingImages" />

@@ -1,5 +1,6 @@
 @extends('app')
 @section('meta_title', 'Wohnen')
+@section('meta_description', 'Wohnen mit Charakter an der Badenerstrasse 587–589 in Zürich Altstetten: grosszügige Lofts mit hohen Decken, Eichenparkett und dem unverwechselbaren Charme eines ehemaligen Industriegebäudes.')
 @section('content')
 
 @php
@@ -42,8 +43,6 @@
           Kurzbaubeschrieb
       </x-links.styled>
     </p>
-
-
 
     <x-slot:aside>
       <x-gallery.carousel name="living-gallery" :images="$surroundingImages" />
