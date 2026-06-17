@@ -3,7 +3,7 @@
 @section('meta_description', 'Datenschutzerklärung von shift in Zürich-Altstetten – Informationen zur Datenverarbeitung, Cookies und Ihren Rechten.')
 @section('content')
 
-<x-layout.section class="py-40">
+<x-layout.section class="py-40 md:py-60">
   <x-layout.inner>
     <div class="max-w-6xl">
       <x-headings.h1>

@@ -3,7 +3,7 @@
 @section('meta_description', 'Impressum von shift in Zürich-Altstetten – Angaben zum Betreiber, Design und Entwicklung.')
 @section('content')
 
-<x-layout.section class="py-40">
+<x-layout.section class="py-40 md:py-60">
   <x-layout.inner>
     <x-headings.h1>
       Impressum
