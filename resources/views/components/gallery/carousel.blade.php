@@ -11,7 +11,7 @@
         <picture class="block w-full h-full">
           <source srcset="{{ $image }}.avif" type="image/avif">
           <source srcset="{{ $image }}.webp" type="image/webp">
-          <img src="{{ $image }}.jpg" alt="" class="w-full h-full object-cover" />
+          <img src="{{ $image }}.jpg" width="960" height="656" alt="" class="w-full h-full object-cover" />
         </picture>
       </x-swiper.slide>
     @endforeach

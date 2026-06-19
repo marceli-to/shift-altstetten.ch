@@ -18,7 +18,7 @@
 
     <x-headings.h2 class="text-[20px]! md:text-[22px]! mb-0!">
       {{ $name }}
-    </x-headings.h3>
+    </x-headings.h2>
 
     {{ $role }}<br>
     <a 
