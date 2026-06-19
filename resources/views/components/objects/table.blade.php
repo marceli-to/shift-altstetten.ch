@@ -16,7 +16,7 @@
 
 {{-- Desktop: full table --}}
 <div class="hidden lg:block">
-  <table class="w-full text-left text-[18px] xl:text-[22px]" data-objects>
+  <table class="w-full text-left text-[18px] xl:text-[20px]" data-objects>
     <thead>
       <tr class="font-bold text-cocoa {{ $accentBg }} [&>th]:h-46 [&>th]:leading-none">
         <th class="pl-20">Nr</th>

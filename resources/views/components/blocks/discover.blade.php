@@ -16,17 +16,17 @@
   <div class="flex gap-x-20">
     <a
       href="{{ route('page.living') }}"
-      class="flex gap-x-5 h-auto"
+      class="group flex gap-x-5 h-auto"
       aria-label="Zu den Wohnungen">
-      <span class="w-5 {{ $barColor }} {{ $roundedClass }}"></span>
-      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 {{ $textSize }}">Wohnen</span>
+      <span class="w-5 {{ $barColor }} {{ $roundedClass }} transition-colors group-hover:bg-blush"></span>
+      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-4 pb-5 transition-colors group-hover:text-blush {{ $textSize }}">Wohnen</span>
     </a>
     <a
       href="{{ route('page.working') }}"
-      class="flex gap-x-5 h-auto"
+      class="group flex gap-x-5 h-auto"
       aria-label="Zu den Gewerberäumen">
-      <span class="w-5 {{ $barColor }} {{ $roundedClass }}"></span>
-      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 {{ $textSize }}">Gewerbe</span>
+      <span class="w-5 {{ $barColor }} {{ $roundedClass }} transition-colors group-hover:bg-blush"></span>
+      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 transition-colors group-hover:text-blush {{ $textSize }}">Gewerbe</span>
     </a>
   </div>
 </div>

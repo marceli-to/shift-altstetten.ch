@@ -1,3 +1,3 @@
-<section class="{{ $class ?? '' }}">
+<section {{ $attributes->merge(['class' => '']) }}>
   {{ $slot }}
 </section>

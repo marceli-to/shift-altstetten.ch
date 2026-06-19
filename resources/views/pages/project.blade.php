@@ -55,14 +55,14 @@
     <x-bars class="absolute z-30 -bottom-62 right-20 h-194 gap-x-10" :count="6" :rounded="true" width="w-5" />
   </div>
 
-  <div class="px-20 py-60">
+  <div class="px-20 py-60" data-reveal>
     @foreach($introText as $line)
       {!! $line !!}
     @endforeach
   </div>
 
   <div class="bg-cocoa text-blush px-20 flex justify-between">
-    <div class="py-40">
+    <div class="py-40" data-reveal>
       <x-blocks.stats variant="mobile" :stats="$stats" />
     </div>
     <x-bars class="h-auto gap-x-10" :count="3" width="w-5" />
@@ -72,7 +72,7 @@
     <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
   </div>
 
-  <div class="px-20 pt-60 pb-40">
+  <div class="px-20 pt-60 pb-40" data-reveal>
     <x-headings.h2>
       {{ $conceptTitle }}
     </x-headings.h2>
@@ -81,7 +81,7 @@
     @endforeach
   </div>
 
-  <div class="bg-cocoa text-blush px-20">
+  <div class="bg-cocoa text-blush px-20" data-reveal>
     <x-blocks.discover
       class="flex gap-x-100"
       heading-class="mt-40"
@@ -90,7 +90,7 @@
       text-size="text-[20px]" />
   </div>
 
-  <div class="px-20 pt-60 pb-40">
+  <div class="px-20 pt-60 pb-40" data-reveal>
     <x-headings.h2>
       {{ $artTitle }}
     </x-headings.h2>
@@ -120,12 +120,12 @@
 
     <div class="absolute z-30 bottom-60 px-20 w-full flex flex-col gap-y-100">
 
-      <div class="max-w-page mx-auto w-full">
+      <div class="max-w-page mx-auto w-full" data-reveal>
         <x-blocks.hero-title title-class="text-[100px] leading-none" subtitle-class="text-[24px]" />
       </div>
 
       <div class="max-w-page mx-auto w-full text-blush flex justify-between">
-        <div class="w-full max-w-[80rem]">
+        <div class="w-full max-w-[80rem]" data-reveal>
           <x-blocks.stats variant="desktop" :stats="$stats" />
         </div>
       </div>
@@ -136,7 +136,7 @@
 
   <x-layout.split>
 
-    <div>
+    <div data-reveal>
       @foreach($introText as $line)
         {!! $line !!}
       @endforeach
@@ -150,7 +150,7 @@
 
   <x-layout.section class="py-80 2xl:py-100">
 
-    <x-layout.inner>
+    <x-layout.inner data-reveal>
 
       <x-headings.h2>
         {{ $conceptTitle }}
@@ -177,14 +177,18 @@
 
   <x-layout.split :reverse="true">
 
-    <x-headings.h2>
-      {{ $artTitle }}
-    </x-headings.h2>
+    <div data-reveal>
 
-    <div>
-      @foreach($artText as $line)
-        {!! $line !!}
-      @endforeach
+      <x-headings.h2>
+        {{ $artTitle }}
+      </x-headings.h2>
+
+      <div>
+        @foreach($artText as $line)
+          {!! $line !!}
+        @endforeach
+      </div>
+
     </div>
 
     <x-slot:aside>

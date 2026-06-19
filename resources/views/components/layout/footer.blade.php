@@ -2,7 +2,7 @@
   <x-layout.inner>
     <div class="grid grid-cols-12 gap-20 items-end">
 
-      <div class="col-span-3 sm:col-span-2 md:col-span-1 mb-4">
+      <div class="col-span-3 sm:col-span-2 md:col-span-1 mb-6">
         <a
           href="https://www.cavegn-immobilien.ch"
           target="_blank"

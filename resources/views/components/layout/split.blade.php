@@ -9,7 +9,11 @@
 
     <div class="lg:grid lg:grid-cols-2">
 
-      <div class="py-40 md:py-60 px-20 xl:pr-60 self-center xl:ml-page-gutter xl:pl-0 {{ $reverse ? 'order-last' : '' }}">
+      <div @class([
+        'py-40 md:py-60 px-20 self-center',
+        'xl:pr-60 xl:pl-0 xl:ml-[calc(max(0px,(100vw_-_var(--container-page))/2)_+_30px)]' => ! $reverse,
+        'order-last xl:pl-60 xl:pr-0 xl:mr-[calc(max(0px,(100vw_-_var(--container-page))/2)_+_30px)]' => $reverse,
+      ])>
         {{ $slot }}
       </div>
 

@@ -15,10 +15,6 @@
   --container-page: 100rem;
 }
 
-@utility ml-page-gutter {
-  margin-left: calc(max(0px, (100vw - var(--container-page)) / 2) + 20px);
-}
-
 [x-cloak] {
   display: none !important;
 }

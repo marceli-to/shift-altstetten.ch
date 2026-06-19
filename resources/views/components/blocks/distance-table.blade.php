@@ -6,16 +6,16 @@
   <thead>
     <tr class="bg-cocoa text-blush">
       <th class="text-left">{{ $columns[0] }}</th>
-      <th class="text-right w-120 md:w-240">{{ $columns[1] }}</th>
-      <th class="text-right w-120 md:w-240">{{ $columns[2] }}</th>
+      <th class="text-right whitespace-nowrap md:w-160">{{ $columns[1] }}</th>
+      <th class="text-right whitespace-nowrap md:w-160">{{ $columns[2] }}</th>
     </tr>
   </thead>
   <tbody>
     @foreach($rows as $row)
       <tr class="border-b border-cocoa">
-        <td>{{ $row[0] }}</td>
-        <td class="text-right">{{ $row[1] }}</td>
-        <td class="text-right">{{ $row[2] }}</td>
+        <td class="hyphens-auto md:whitespace-nowrap">{{ $row[0] }}</td>
+        <td class="text-right whitespace-nowrap">{{ $row[1] }}</td>
+        <td class="text-right whitespace-nowrap">{{ $row[2] }}</td>
       </tr>
     @endforeach
   </tbody>

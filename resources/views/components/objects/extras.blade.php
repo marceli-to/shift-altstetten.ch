@@ -9,7 +9,7 @@
   {{-- Desktop: full table --}}
   <table class="hidden lg:table w-full text-left">
     <thead>
-      <tr class="font-bold uppercase text-cocoa {{ $accentBg }} [&>th]:h-46">
+      <tr class="font-bold text-cocoa {{ $accentBg }} [&>th]:h-46">
         <th class="pl-20">Typ</th>
         <th class="pr-20 text-right">Preis/Mt.</th>
       </tr>

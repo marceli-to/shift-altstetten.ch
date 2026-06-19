@@ -5,17 +5,17 @@
 
   <x-layout.section class="py-40 md:py-60 2xl:py-80">
 
-    <x-layout.inner>
+    <x-layout.inner data-reveal>
 
       <x-headings.h1>
         Kontakt
       </x-headings.h1>
 
       <x-layout.article>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Haben wir dein Interesse geweckt? Wir sind gerne für Sie da und beantworten Ihre Fragen.</p>
       </x-layout.article>
 
-      <div class="grid xl:grid-cols-2 gap-y-40 xl:gap-y-0 md:gap-x-60 mt-40 md:mt-60 max-w-8xl">
+      <div class="grid xl:grid-cols-2 gap-y-40 xl:gap-y-0 md:gap-x-60 mt-40 md:mt-60 max-w-8xl" data-reveal-children>
 
         <x-blocks.person
           image="/img/shift-bild-profil-l-razzino"

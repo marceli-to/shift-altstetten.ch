@@ -1,9 +1,6 @@
-<x-layout.section :class="$attributes->get('class')">
+<x-layout.section {{ $attributes->merge(['class' => '']) }}>
   <x-layout.split>
-    {{ $slot }}
-
-    <x-downloads />
-
+    <div>{{ $slot }}</div>
     <x-slot:aside>{{ $aside }}</x-slot:aside>
   </x-layout.split>
 </x-layout.section>

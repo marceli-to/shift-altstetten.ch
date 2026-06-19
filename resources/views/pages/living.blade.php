@@ -20,20 +20,21 @@
 @endphp
 
 <x-sections.intro class="bg-blush">
-  <x-headings.h1>Hier wird Wohnen zum Gefühl</x-headings.h1>
-  <p>Die Wohnungen verbinden grosszügige Raumkonzepte mit dem unverwechselbaren Charakter eines ehemaligen Industriegebäudes – und schaffen damit Orte, die nicht nur funktionieren, sondern berühren.</p>
+  <div data-reveal>
+    <x-headings.h1>Hier wird Wohnen zum Gefühl</x-headings.h1>
+    <p>Die Wohnungen verbinden grosszügige Raumkonzepte mit dem unverwechselbaren Charakter eines ehemaligen Industriegebäudes – und schaffen damit Orte, die nicht nur funktionieren, sondern berühren.</p>
 
-  <p>
-    <x-links.icon href="">
-      <x-slot:icon>
-        <x-icons.house class="w-20 h-auto" />
-      </x-slot:icon>
-      Zu den Wohnungen
-    </x-links.icon>
-  </p>
+    <p>
+      <x-links.icon href="#angebot">
+        <x-slot:icon>
+          <x-icons.house class="w-20 h-auto" />
+        </x-slot:icon>
+        Zu den Wohnungen
+      </x-links.icon>
+    </p>
 
-  <p>Hohe Decken lassen Luft und Freiheit spürbar werden. Grosszügige Fensterfronten holen das Tageslicht tief in den Raum und lassen Innen- und Aussenwelt miteinander verschmelzen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, ehrlich und voller Identität. Gleichzeitig schafft der warme Eichenparkett einen wohltuenden Kontrast: Er bringt Ruhe, Natürlichkeit und eine spürbare Wohnlichkeit in die offenen Räume und erdet die industrielle Architektur auf eine sinnliche Weise. So entsteht ein Wohngefühl, dass man nicht einfach einrichtet, sondern erlebt: urban, kraftvoll und einzigartig.</p>
-
+    <p>Hohe Decken lassen Luft und Freiheit spürbar werden. Grosszügige Fensterfronten holen das Tageslicht tief in den Raum und lassen Innen- und Aussenwelt miteinander verschmelzen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, ehrlich und voller Identität. Gleichzeitig schafft der warme Eichenparkett einen wohltuenden Kontrast: Er bringt Ruhe, Natürlichkeit und eine spürbare Wohnlichkeit in die offenen Räume und erdet die industrielle Architektur auf eine sinnliche Weise. So entsteht ein Wohngefühl, dass man nicht einfach einrichtet, sondern erlebt: urban, kraftvoll und einzigartig.</p>
+  </div>
   <x-slot:aside>
     <x-gallery.carousel name="living-gallery" :images="$surroundingImages" />
   </x-slot:aside>
@@ -57,15 +58,12 @@
   </div>
 </x-sections.feature>
 
-<x-layout.section class="py-40 md:py-60">
-  <x-layout.inner>
-    <x-headings.h2 class="mb-20 md:mb-30">Angebot Wohnen</x-headings.h2>
-    <p class="mb-30 md:mb-50 max-w-[640px]">
-      Je nach Geschoss entfalten die Räume ihren eigenen Charakter:<br>
-      Unten das echte Loft – weit, offen, beeindruckend.<br>
-      Weiter oben eine ruhigere, fein proportionierte Wohnqualität.<br>
-      Und ganz oben: ein Wohnerlebnis über den Dächern der Stadt.
-    </p>
+<x-layout.section class="py-40 md:py-60 scroll-mt-80 md:scroll-mt-94" id="angebot">
+  <x-layout.inner data-reveal>
+    <x-headings.h2 class="scroll-mt-100 mb-20 md:mb-30">Angebot Wohnen</x-headings.h2>
+    <div class="mb-30 md:mb-50 max-w-[640px]">
+      Je nach Geschoss entfalten die Räume ihren eigenen Charakter: Unten das echte Loft – weit, offen, beeindruckend. Weiter oben eine ruhigere, fein proportionierte Wohnqualität. Und ganz oben: ein Wohnerlebnis über den Dächern der Stadt.
+    </div>
     <x-objects.wrapper :apartments="$apartments" :filterOptions="$filterOptions" accent="blush" :extras="$extras" />
   </x-layout.inner>
 </x-layout.section>
