@@ -7,9 +7,9 @@ $styles = [
   'mobile' => [
     'heading' => 'text-[20px]! mb-30!',
     'list' => 'flex flex-col gap-y-20',
-    'number' => 'text-[45px] w-56',
+    'number' => 'text-[45px] w-64',
     'align' => 'text-center',
-    'label' => 'text-[18px]',
+    'label' => 'text-[18px] text-left',
     'break' => false,
   ],
   'desktop' => [
@@ -23,12 +23,12 @@ $styles = [
 ][$variant];
 @endphp
 <x-headings.h2 class="{{ $styles['heading'] }}">
-  Bis Sommer 2027 entstehen
+  Bis Mai 2027 entstehen
 </x-headings.h2>
 <div class="{{ $styles['list'] }}">
   @foreach($stats as $stat)
     <div class="flex items-center gap-x-12">
-      <span class="font-bold {{ $styles['align'] }} {{ $styles['number'] }}">{{ $stat['number'] }}</span>
+      <span class="font-bold tabular-nums {{ $styles['align'] }} {{ $styles['number'] }}">{{ $stat['number'] }}</span>
       <span class="{{ $styles['label'] }}">{!! str_replace("\n", $styles['break'] ? '<br>' : ' ', e($stat['label'])) !!}</span>
     </div>
   @endforeach

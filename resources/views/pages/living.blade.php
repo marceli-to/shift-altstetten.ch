@@ -62,7 +62,7 @@
   <x-layout.inner data-reveal>
     <x-headings.h2 class="scroll-mt-100 mb-20 md:mb-30">Angebot Wohnen</x-headings.h2>
     <div class="mb-30 md:mb-50 max-w-[640px]">
-      Je nach Geschoss entfalten die Räume ihren eigenen Charakter: Unten das echte Loft – weit, offen, beeindruckend. Weiter oben eine ruhigere, fein proportionierte Wohnqualität. Und ganz oben: ein Wohnerlebnis über den Dächern der Stadt.
+      Je nach Geschoss entfalten die Räume ihren eigenen Charakter: Unten das echte Loft – weit, offen, beeindruckend.<br>Weiter oben eine ruhigere, fein proportionierte Wohnqualität.<br>Und ganz oben: ein Wohnerlebnis über den Dächern der Stadt.
     </div>
     <x-objects.wrapper :apartments="$apartments" :filterOptions="$filterOptions" accent="blush" :extras="$extras" />
   </x-layout.inner>

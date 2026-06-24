@@ -27,6 +27,11 @@
         title="Lage" />
 
       <x-menu.mobile.item
+        href="{{ route('page.facts') }}"
+        active="{{ request()->routeIs('page.facts') }}"
+        title="Facts" />
+
+      <x-menu.mobile.item
         href="{{ route('page.contact') }}"
         active="{{ request()->routeIs('page.contact') }}"
         title="Kontakt" />

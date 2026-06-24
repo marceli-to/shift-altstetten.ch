@@ -10,15 +10,18 @@
     '/img/shift-bild-umgebung-05',
   ];
   $artworkImages = [
+    '/img/shift-bild-kunst-am-bau-07',
     '/img/shift-bild-kunst-am-bau-01',
     '/img/shift-bild-kunst-am-bau-02',
     '/img/shift-bild-kunst-am-bau-03',
     '/img/shift-bild-kunst-am-bau-04',
     '/img/shift-bild-kunst-am-bau-05',
     '/img/shift-bild-kunst-am-bau-06',
+    '/img/shift-bild-kunst-am-bau-08',
+    '/img/shift-bild-kunst-am-bau-09',
   ];
   $stats = [
-    ['number' => 24, 'label' => "moderne, grosszügige\nLoftwohnungen"],
+    ['number' => 45, 'label' => "moderne, grosszügige\nLoftwohnungen"],
     ['number' => 12, 'label' => "vollständig\nausgebaute Kleinbüros"],
     ['number' => 10, 'label' => "beheizte Lager-/\nHobbyräume mit Tageslicht"],
   ];
@@ -118,13 +121,13 @@
       class="w-full h-[calc(100vh-94px)]" />
     <div class="bg-linear-to-b from-transparent to-cocoa absolute z-20 top-[40%] left-0 right-0 h-[60%]"></div>
 
-    <div class="absolute z-30 bottom-60 px-20 w-full flex flex-col gap-y-100">
+    <div class="absolute z-30 bottom-60 w-full flex flex-col gap-y-100">
 
-      <div class="max-w-page mx-auto w-full" data-reveal>
+      <div class="max-w-page mx-auto w-full px-20 xl:px-30" data-reveal>
         <x-blocks.hero-title title-class="text-[100px] leading-none" subtitle-class="text-[24px]" />
       </div>
 
-      <div class="max-w-page mx-auto w-full text-blush flex justify-between">
+      <div class="max-w-page mx-auto w-full px-20 xl:px-30 text-blush flex justify-between">
         <div class="w-full max-w-[80rem]" data-reveal>
           <x-blocks.stats variant="desktop" :stats="$stats" />
         </div>

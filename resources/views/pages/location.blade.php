@@ -73,4 +73,11 @@
     </x-layout.inner>
   </x-layout.section>
 
+  <x-layout.section data-reveal>
+    <div
+      id="map"
+      data-zoom="15"
+      class="w-full aspect-[4/3] md:aspect-[16/7] 2xl:aspect-[16/6] bg-cocoa/5"></div>
+  </x-layout.section>
+
 @endsection

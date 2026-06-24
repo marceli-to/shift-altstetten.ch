@@ -23,12 +23,13 @@ strong {
   @apply font-bold;
 }
 
-p:not(:last-of-type){
+p:not(:last-child),
+main ul:not(:last-child) {
   @apply mb-16 md:mb-20;
 }
 
 main ul {
-  @apply mb-16 md:mb-20 pl-20;
+  @apply pl-20;
 }
 
 main li {

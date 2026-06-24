@@ -2,13 +2,14 @@
   <x-layout.inner>
     <div class="grid grid-cols-12 gap-20 items-end">
 
-      <div class="col-span-3 sm:col-span-2 md:col-span-1 mb-6">
+      <div class="col-span-3 sm:col-span-2 md:col-span-1 md:mb-6">
         <a
           href="https://www.cavegn-immobilien.ch"
           target="_blank"
           rel="noopener noreferrer"
           title="Zur Website von Cavegn Immobilien"
-          aria-label="Zur Website von Cavegn Immobilien">
+          aria-label="Zur Website von Cavegn Immobilien"
+          class="relative bottom-4 block sm:bottom-0">
           <x-icons.logo-cavegn class="block w-auto h-160 md:h-140 2xl:h-180" />
         </a>
       </div>
@@ -22,10 +23,10 @@
         <div class="sm:col-span-3 md:col-span-6 lg:col-span-3 flex flex-col">
           <div>
             <a
-              href="tel:0435373353"
-              aria-label="Telefon 043 537 33 53"
+              href="tel:+41435373353"
+              aria-label="Telefon +41 43 537 33 53"
               class="no-underline hover:underline underline-offset-4 decoration-1">
-              Telefon 043 537 33 53
+              Telefon +41 43 537 33 53
             </a>
           </div>
           <div>
