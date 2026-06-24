@@ -21,8 +21,8 @@
 
 <x-sections.intro class="bg-blush">
   <div data-reveal>
-    <x-headings.h1>Hier wird Wohnen zum Gefühl</x-headings.h1>
-    <p>Die Wohnungen verbinden grosszügige Raumkonzepte mit dem unverwechselbaren Charakter eines ehemaligen Industriegebäudes – und schaffen damit Orte, die nicht nur funktionieren, sondern berühren.</p>
+    <x-headings.h1>Hier wird Wohnen zum Gefühl.</x-headings.h1>
+    <p>Durch die sorgfältige Transformation entstehen 45 lichtdurchflutete Loftwohnungen mit 1.5, 2.5 und 3.5 Zimmern.</p>
 
     <p>
       <x-links.icon href="#angebot">
@@ -33,7 +33,7 @@
       </x-links.icon>
     </p>
 
-    <p>Hohe Decken lassen Luft und Freiheit spürbar werden. Grosszügige Fensterfronten holen das Tageslicht tief in den Raum und lassen Innen- und Aussenwelt miteinander verschmelzen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, ehrlich und voller Identität. Gleichzeitig schafft der warme Eichenparkett einen wohltuenden Kontrast: Er bringt Ruhe, Natürlichkeit und eine spürbare Wohnlichkeit in die offenen Räume und erdet die industrielle Architektur auf eine sinnliche Weise. So entsteht ein Wohngefühl, dass man nicht einfach einrichtet, sondern erlebt: urban, kraftvoll und einzigartig.</p>
+    <p>Hohe Decken und grossflächige Fenster lassen Licht und Weite in jeden Raum fliessen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, authentisch und voller Identität. Warmes Eichenparkett und eine fein abgestimmte Farb- und Materialwelt in sanften Naturtönen schaffen dazu einen harmonischen Kontrast und verleihen den Räumen Ruhe, Wärme und zeitlose Eleganz. Die als Vier-Jahreszeiten-Zimmer konzipierten Loggien erweitern den Wohnraum auf natürliche Weise. Als geschützte Rückzugsorte bieten sie das ganze Jahr über vielfältige Nutzungsmöglichkeiten und bereichern die Wohnqualität zu jeder Jahreszeit.</p>
   </div>
   <x-slot:aside>
     <x-gallery.carousel name="living-gallery" :images="$surroundingImages" />
@@ -44,17 +44,31 @@
   <x-headings.h2 class="mb-30! pr-40 md:pr-0">Wohnen in den Gefühlswelten</x-headings.h2>
   <div class="flex flex-col gap-y-30 md:grid md:grid-cols-3 md:gap-20 pr-44 md:pr-0">
     <x-sections.feature-item>
-      <x-headings.h3>Loft Living</x-headings.h3>
-      <p>Raum, der inspiriert. Architektur, die spürbar wird. Hier lebt das echte Loftgefühl – offen, weit und voller Charakter. Ein Ort für alle, die Grosszügigkeit nicht nur sehen, sondern fühlen wollen.</p>
+      <x-headings.h3>Weite.</x-headings.h3>
+      <p>Vergangenes wird bewahrt, Neues mit Sorgfalt ergänzt. So entstehen Lofts mit eigenem Ausdruck. Hohe Decken, viel Licht und die unverwechselbare Handschrift des Hauses verleihen den Räumen eine besondere Präsenz. Ein Zuhause, das Raum zum Leben gibt.</p>
     </x-sections.feature-item>
     <x-sections.feature-item>
-      <x-headings.h3>Stadt-Oase</x-headings.h3>
-      <p>Rückzug mitten im Leben. Die Vier-Jahreszeiten-Zimmer werden zu deinem persönlichen Ruhepol – geschützt, flexibel und immer nutzbar. Hier entsteht ein Raum, der dich durch alle Jahreszeiten begleitet.</p>
+      <x-headings.h3>Ruhe.</x-headings.h3>
+      <p>Rückzug mitten im Leben.<br>Die Loggia wird zum Lieblingsplatz und die Dachterrasse zum Fenster über die Stadt. Zwischen urbaner Energie und stillen Momenten entsteht eine neue Form von Geborgenheit – ein Rückzugsort, der mit den Jahreszeiten lebt und Raum für kleine Auszeiten schafft.</p>
     </x-sections.feature-item>
     <x-sections.feature-item>
-      <x-headings.h3>Work-Live-Balance</x-headings.h3>
-      <p>Wenn Wohnen und Arbeiten im Einklang sind. Die Räume passen sich deinem Leben an – nicht umgekehrt. Ob konzentriertes Arbeiten, kreatives Denken oder entspanntes Wohnen: Alles findet hier seinen Platz, fliessend und selbstverständlich verbunden.</p>
+      <x-headings.h3>Möglichkeit.</x-headings.h3>
+      <p>Wo Ideen entstehen und Zuhause beginnt.<br>Arbeiten, wo das Leben stattfindet. Denken, ohne Wege. Zusätzliche Büroflächen schaffen Raum für Kreativität, Fokus und neue Perspektiven. Und wenn der Tag endet, wartet das Zuhause nur wenige Schritte entfernt. Weil sich Leben und Arbeiten nicht trennen müssen – wenn beides am richtigen Ort zusammenkommt.</p>
     </x-sections.feature-item>
+  </div>
+  <div class="mt-30 md:mt-40 flex flex-col gap-y-10">
+    <x-links.icon href="#">
+      <x-slot:icon>
+        <x-icons.download class="w-18 h-auto" variant="file" />
+      </x-slot:icon>
+      Infoblatt Vier-Jahreszeiten-Zimmer
+    </x-links.icon>
+    <x-links.icon href="#">
+      <x-slot:icon>
+        <x-icons.download class="w-18 h-auto" variant="file" />
+      </x-slot:icon>
+      Kurzbaubeschrieb
+    </x-links.icon>
   </div>
 </x-sections.feature>
 

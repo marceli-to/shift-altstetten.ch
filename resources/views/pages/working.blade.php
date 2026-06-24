@@ -24,8 +24,8 @@
 <x-sections.intro class="bg-sky">
   <div data-reveal>
 
-    <x-headings.h1>Arbeiten bekommt hier Qualität</x-headings.h1>
-    <p>Die Gewerbeflächen sind integraler Bestandteil des architektonischen Gesamtkonzepts. Sie schaffen eigenständige Arbeitsorte mit urbanem Charakter – attraktiv sowohl für BewohnerInnen des Hauses als auch für externe Nutzer.</p>
+    <x-headings.h1>Wo Ideen Raum bekommen.</x-headings.h1>
+    <p>Die Kleinbüros entlang der Badenerstrasse sind Teil eines Gesamtkonzepts, das Wohnen und Arbeiten auf natürliche Weise miteinander verbindet – für Bewohnerinnen und Bewohner ebenso wie für externe Nutzer. Die vollständig ausgebauten Räume mit hochwertigem Parkett und integrierten Teeküchen bieten Platz für Ideen. Ob Homeoffice, Start-up oder eigenes KMU – hier findet Arbeit ihren Platz und Inspiration ihren Raum.</p>
 
     <p>
       <x-links.icon href="#angebot">
@@ -33,23 +33,6 @@
           <x-icons.briefcase class="w-20 h-auto" />
         </x-slot:icon>
         Zu den Gewerbeflächen
-      </x-links.icon>
-    </p>
-
-    <p>Die Kleinbüros entlang der Badenerstrasse bieten optimale Voraussetzungen für modernes Arbeiten: Sie werden vollständig ausgebaut vermietet und verfügen über hochwertige Parkettböden sowie integrierte Teeküchen. So entstehen sofort bezugsbereite Flächen, die Funktionalität und Ästhetik verbinden. Die industrielle Architektur mit grosszügigen Raumhöhen, klaren Strukturen und charakteristischen Elementen verleiht den Arbeitsräumen eine inspirierende Atmosphäre. Ob für kreative Tätigkeiten, Dienstleistungen oder konzentriertes Arbeiten – die Flächen bieten vielfältige Nutzungsmöglichkeiten in einem hochwertigen Umfeld.</p>
-
-    <p class="flex flex-col gap-y-10">
-      <x-links.icon href="#">
-        <x-slot:icon>
-          <x-icons.download class="w-18 h-auto" variant="file" />
-        </x-slot:icon>
-        Infoblatt
-      </x-links.icon>
-      <x-links.icon href="#">
-        <x-slot:icon>
-          <x-icons.download class="w-18 h-auto" variant="file" />
-        </x-slot:icon>
-        Kurzbaubeschrieb
       </x-links.icon>
     </p>
 
@@ -66,8 +49,17 @@
   <div class="pr-44 md:pr-0">
     <x-sections.feature-item class="md:max-w-1/2!">
       <x-headings.h3>Hobby-/Lagerräume</x-headings.h3>
-      <p>Im Untergeschoss stehen beheizte Lager- und Hobbyräume zur Verfügung. Dank natürlichem Tageslicht gehen sie über klassische Nebenflächen hinaus und eröffnen zusätzlichen Raum für individuelle Nutzung – sei es als Werkstatt, Atelier, Stauraum oder persönlicher Rückzugsort für Hobbys.</p>
+      <p>Im Untergeschoss stehen beheizte Lager- und Hobbyräume mit natürlichem Tageslicht zur Verfügung. Weit mehr als klassische Nebenräume, schaffen sie Platz für Kreativität, Handwerk und persönliche Leidenschaften. Ein Ort zum Werkeln, Gestalten, Sammeln oder einfach für all das, was im Alltag seinen eigenen Platz braucht.</p>
     </x-sections.feature-item>
+  </div>
+
+  <div class="mt-30 md:mt-40 flex flex-col gap-y-10">
+    <x-links.icon href="#">
+      <x-slot:icon>
+        <x-icons.download class="w-18 h-auto" variant="file" />
+      </x-slot:icon>
+      Kurzbaubeschrieb
+    </x-links.icon>
   </div>
 </x-sections.feature>
 

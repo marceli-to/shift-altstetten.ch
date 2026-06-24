@@ -39,9 +39,13 @@ Quelle: `.data/readme.txt`, `.data/data/` (Texte, Bilder, Screenshots).
 - [x] `$artworkImages`: **07 zuerst**, danach bestehende 01–06, dann 08, 09 (Entscheid: prepend 07, 01–06 behalten).
 - Datei: `resources/views/pages/project.blade.php`.
 
-### 6. Neuer Text übernehmen
-- [ ] Texte aus `.data/data/Text/C01_Shift_Text_korrigiert_programmieren_260623.docx` mit dem aktuellen Stand abgleichen und einpflegen (Intro, Projektbeschrieb, Kunst am Bau, Wohnen, Arbeiten, Lage, Facts, Kontakt).
-- Bei Unklarheiten beim Kunden nachfragen.
+### 6. Neuer Text übernehmen ✅
+- [x] Startseite: Intro (+ Titel «SHIFT. Zürich Altstetten»), Projektbeschrieb, Kunst am Bau – Tonalität auf «Sie/Ihr».
+- [x] Wohnen: Intro, Hauptabsatz, Feature-Items (Weite/Ruhe/Möglichkeit), Downloads-Block.
+- [x] Arbeiten: Titel «Wo Ideen Raum bekommen.», Intro (1 Absatz), Hobby-Text, Downloads (nur Kurzbaubeschrieb) in Feature-Section.
+- [x] Lage: Intro («Sie»), Transit-Tabelle (+ Zürich Altstetten), Lokal-Tabelle (Hallenbad statt Freibad, + Swiss Life Arena, Bahnhof Altstetten entfernt).
+- [x] Facts + Kontakt: siehe Tasks 2 / 11.
+- ⚠️ Offen: (1) Download-PDFs fehlen noch (Links `href="#"` auf Wohnen + Arbeiten). (2) Lage «Fotos Reihenfolge» laut docx – Mapping Dateiname→Ort unklar.
 
 ---
 

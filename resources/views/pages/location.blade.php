@@ -16,6 +16,7 @@
   $transitTable = [
     'columns' => ['Ort', 'Auto', 'ÖV'],
     'rows' => [
+      ['Zürich Altstetten', '7 Min.', '10 Min.'],
       ['Zürich HB', '15 Min.', '20 Min.'],
       ['Zürich Flughafen', '20 Min.', '35 Min.'],
       ['Schlieren', '10 Min.', '10 Min.'],
@@ -25,14 +26,14 @@
   $localTable = [
     'columns' => ['Ort', 'Fahrrad', 'zu Fuss'],
     'rows' => [
-      ['Bahnhof Altstetten', '4 Min.', '14 Min.'],
       ['Coop Pronto', '1 Min.', '1 Min.'],
       ['ALDI Suisse', '1 Min.', '4 Min.'],
       ['Primar-/Sekundarschule Kappeli', '2 Min.', '5 Min.'],
       ['Einkaufszentrum Letzipark', '3 Min.', '5 Min.'],
       ['Stadion Letzigrund', '4 Min.', '11 Min.'],
       ['Freibad Letzigraben', '6 Min.', '17 Min.'],
-      ['Freibad Altstetten', '8 Min.', '17 Min.'],
+      ['Hallenbad Altstetten', '8 Min.', '17 Min.'],
+      ['Swiss Life Arena', '8 Min.', '25 Min.'],
     ],
   ];
 @endphp
@@ -45,9 +46,8 @@
       </x-headings.h1>
 
       <div class="text-[20px] md:text-[22px]">
-        <p>Die Liegenschaft an der Badenerstrasse 587–589 liegt mitten im lebendigen Zürcher Quartier Altstetten – und verbindet zentrale Lage mit einer Leichtigkeit im Alltag, die man sofort spürt.</p>
-        <p>Die Tramhaltestelle «Kappeli» befindet sich direkt vor der Haustür. Von hier aus bist du in wenigen Minuten in der Zürcher Innenstadt. Auch der Bahnhof Altstetten ist schnell erreichbar und eröffnet zusätzliche Mobilität: Mit direkten Anschlüssen an das S-Bahnnetz erreichst du wichtige Destinationen wie den Flughafen Zürich, Zug, Luzern oder Basel bequem und ohne Umwege. Gleichzeitig sorgen die nahegelegenen Autobahnanschlüsse A1 und A3 für eine optimale Erschliessung im Individualverkehr.</p>
-        <p>Doch die Qualität dieser Lage zeigt sich vor allem im Alltag: Einkaufsmöglichkeiten, Cafés, Restaurants und Dienstleistungen liegen in unmittelbarer Gehdistanz. Gleichzeitig bietet das Quartier mit seiner Mischung aus Wohnen, Arbeiten und Freizeit ein lebendiges und vielseitiges Umfeld mit städtischem Charakter.</p>
+        <p>SHIFT liegt mitten im lebendigen Zürcher Quartier Altstetten. Hier ist vieles nur wenige Schritte entfernt: Der erste Kaffee am Morgen, der spontane Einkauf, das Lieblingsrestaurant oder der Weg ins Grüne.</p>
+        <p>Direkt vor der Haustür verbindet die Tramhaltestelle «Kappeli» das Quartier mit dem Zürcher Stadtzentrum. Über den Bahnhof Altstetten gelangen Sie bequem zum Flughafen Zürich sowie nach Zug, Luzern oder Basel. Auch die Autobahnanschlüsse A1 und A3 sind schnell erreichbar. Doch die wahre Qualität dieses Standorts zeigt sich im Alltag. In den kurzen Wegen. In der Vielfalt des Quartiers. Und in dem Gefühl, genau dort zu sein, wo sich Leben, Arbeiten und Freizeit auf natürliche Weise verbinden.</p>
       </div>
 
     </div>

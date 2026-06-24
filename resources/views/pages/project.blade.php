@@ -26,20 +26,22 @@
     ['number' => 10, 'label' => "beheizte Lager-/\nHobbyräume mit Tageslicht"],
   ];
 
+  $introTitle = 'SHIFT. Zürich Altstetten';
   $introText = [
-    '<p>Durch nachhaltiges Bauen im Bestand entsteht an der Badenerstrasse 587-589, 8048 Zürich etwas Besonderes:</p>',
-    '<p>Der ehemalige Electrolux-Standort wird sorgfältig transformiert – in Kleingewerbe und grosszügige Loftwohnungen mit markantem industriellem Flair. Vielleicht schon bald dein neues Zuhause oder dein zukünftiger Gewerbestandort?</p>',
+    '<p>Wo einst gearbeitet wurde, entsteht heute Raum zum Leben, Arbeiten und Ankommen. Die ehemalige Gewerbeliegenschaft an der Badenerstrasse 587–589 wird sorgfältig in grosszügige Loftwohnungen und Kleingewerbeflächen mit industriellem Flair transformiert.</p>',
+    '<p>Urban. Charakterstark. Unverwechselbar.<br>Vielleicht schon bald Ihr neues Zuhause.<br>Oder der Ort, an dem aus Ideen Wirklichkeit wird.</p>',
   ];
 
   $conceptTitle = 'Raumkonzepte mit industriellem Charme';
   $conceptText = [
-    '<p>Mit dem Projekt SHIFT entsteht ein vollständig saniertes Wohn- und Geschäftshaus mit gemischter Nutzung, das den Wandel moderner Wohn- und Arbeitsformen aufgreift. Flexible Raumkonzepte ermöglichen vielfältige Nutzungen und passen sich individuellen Bedürfnissen an.</p>',
-    '<p>Das ehemalige Industriegebäude verbindet seine Geschichte mit klarer architektonischer Gestaltung und hoher baulicher Qualität. Durch die behutsame Umnutzung entstehen hohe, offene Räume mit unverwechselbarem industriellem Charme und einer besonderen Loft-Atmosphäre.</p>',
+    '<p>Manche Orte haben eine Geschichte – und genau darin liegt ihr Charakter.</p>',
+    '<p>Mit SHIFT entsteht ein Wohn- und Geschäftshaus, das den Wandel unserer Zeit widerspiegelt. Ein Ort für Menschen, die Arbeit und Leben nicht trennen wollen, sondern beides harmonisch miteinander verbinden möchten. Räume, die sich mit ihren Bewohnern verändern, Freiraum schaffen und individuelle Lebensentwürfe ermöglichen. Durch die behutsame Umnutzung entstehen lichtdurchflutete Lofts und charaktervolle Gewerbeflächen. Sie zeichnen sich durch hohe Räume, rohe Materialien und die sichtbaren Spuren des ehemaligen Industriegebäudes aus.</p>',
   ];
 
-  $artTitle = 'Kunst am Bau';
+  $artTitle = 'Kunst, die Begegnungen sichtbar macht';
   $artText = [
-    '<p>Gestalterische Elemente prägen SHIFT über die Architektur hinaus und verleihen dem Projekt zusätzliche Ausdruckskraft.</p>',
+    '<p>Für SHIFT hat die Schweizer Künstlerin Anuschka Schiess ein eigens für das Projekt geschaffenes Kunstwerk entwickelt. Die rund 10 m² grosse Bauwand wird dabei zur lebendigen Leinwand – zu einem Ausdruck dessen, was diesen Ort ausmacht und künftig prägen wird.</p>',
+    '<p>Farben, Formen und Bewegung erzählen von Vielfalt, Dynamik und dem Zusammenspiel unterschiedlichster Lebens- und Arbeitswelten. Sie stehen für Menschen, die sich begegnen, Ideen, die entstehen, und Geschichten, die hier neu geschrieben werden.</p>',
   ];
 @endphp
 
@@ -59,6 +61,9 @@
   </div>
 
   <div class="px-20 py-60" data-reveal>
+    <x-headings.h2>
+      {{ $introTitle }}
+    </x-headings.h2>
     @foreach($introText as $line)
       {!! $line !!}
     @endforeach
@@ -140,6 +145,9 @@
   <x-layout.split>
 
     <div data-reveal>
+      <x-headings.h2>
+        {{ $introTitle }}
+      </x-headings.h2>
       @foreach($introText as $line)
         {!! $line !!}
       @endforeach
