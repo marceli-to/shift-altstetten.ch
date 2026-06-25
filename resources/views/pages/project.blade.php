@@ -21,7 +21,7 @@
     '/img/shift-bild-kunst-am-bau-09',
   ];
   $stats = [
-    ['number' => 45, 'label' => "moderne, grosszügige\nLoftwohnungen"],
+    ['number' => 45, 'label' => "moderne, lichtdurchflutete\nLoftwohnungen"],
     ['number' => 12, 'label' => "vollständig\nausgebaute Kleinbüros"],
     ['number' => 10, 'label' => "beheizte Lager-/\nHobbyräume mit Tageslicht"],
   ];
