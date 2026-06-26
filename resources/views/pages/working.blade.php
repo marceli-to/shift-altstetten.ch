@@ -16,8 +16,6 @@
     ['type' => 'Tiefgaragen-Parkplatz', 'price' => 'CHF 130'],
     ['type' => 'E-Ladestation', 'price' => 'CHF 170'],
     ['type' => 'Motorrad-Parkplatz', 'price' => 'CHF 40'],
-    ['type' => 'Lagerraum', 'price' => 'CHF 450'],
-    ['type' => 'Hobbyraum', 'price' => 'CHF 450'],
   ];
 @endphp
 

@@ -3,6 +3,8 @@
 @php
   $accentBg = $accent === 'sky' ? 'bg-sky' : 'bg-blush';
   $accentBgHover = $accent === 'sky' ? 'hover:bg-sky/20' : 'hover:bg-blush/20';
+  // Same tint as the row hover, applied when the matching iso shape is hovered.
+  $accentBgActive = $accent === 'sky' ? '[&.is-active]:bg-sky/20' : '[&.is-active]:bg-blush/20';
 
   $stateDot = ['free' => 'bg-state-free', 'reserved' => 'bg-state-reserved', 'taken' => 'bg-state-taken'];
   $stateLabel = ['reserved' => 'reserviert', 'taken' => 'vermietet'];
@@ -39,10 +41,11 @@
         <tr
           data-filterable
           data-object
+          data-object-number="{{ \Illuminate\Support\Str::lower($apartment['title']) }}"
           data-object-state="{{ $state }}"
           data-object-rooms="{{ $apartment['rooms'] }}"
           data-object-floor="{{ $apartment['floor'] }}"
-          class="border-b border-cocoa [&>td]:font-bold [&>td]:h-54 {{ $accentBgHover }}">
+          class="border-b border-cocoa [&>td]:font-bold [&>td]:h-54 {{ $accentBgHover }} {{ $accentBgActive }}">
 
           <td class="pl-4">
             <div class="flex items-center gap-x-8">
@@ -125,11 +128,12 @@
     <div
       data-filterable
       data-object
+      data-object-number="{{ \Illuminate\Support\Str::lower($apartment['title']) }}"
       data-object-state="{{ $state }}"
       data-object-rooms="{{ $apartment['rooms'] }}"
       data-object-floor="{{ $apartment['floor'] }}"
       x-data="{ open: false }"
-      class="border-b border-cocoa">
+      class="border-b border-cocoa {{ $accentBgActive }}">
 
       <div
         @click="open = !open"

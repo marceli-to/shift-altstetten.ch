@@ -9,6 +9,24 @@ class GetData
 {
   public function execute(): Collection
   {
+    return collect($this->source())
+      ->map(fn ($object) => $this->normalize($object))
+      ->sortBy('title')
+      ->values();
+  }
+
+  /**
+   * Raw object array, either from the committed mock fixture (while the live
+   * Melon endpoint is unavailable) or from the cached API response.
+   */
+  private function source(): array
+  {
+    if (config('melon.mock')) {
+      $path = database_path('data/apartments-mock.json');
+
+      return is_file($path) ? (json_decode(file_get_contents($path), true) ?: []) : [];
+    }
+
     // Re-fetch when the cached file is missing or older than 60 minutes.
     if (
       !Storage::disk('public')->exists('apartements.json') ||
@@ -17,12 +35,7 @@ class GetData
       (new FetchData)->execute();
     }
 
-    $data = collect(json_decode(Storage::disk('public')->get('apartements.json'), true) ?: []);
-
-    return $data
-      ->map(fn ($object) => $this->normalize($object))
-      ->sortBy('title')
-      ->values();
+    return json_decode(Storage::disk('public')->get('apartements.json'), true) ?: [];
   }
 
   /**

@@ -5,7 +5,7 @@ const Iso = (function() {
     object: '[data-object]',
     building: '[data-building]',
     iso: '[data-iso]',
-    floor: '[data-iso-floor]',
+    floor: '[data-floor]',
   };
 
   const initialize = function() {

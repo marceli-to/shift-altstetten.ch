@@ -1,7 +1,8 @@
 @props(['options' => [], 'accent' => 'blush'])
 
 @php
-  $availability = collect($options['availability'] ?? [])->replace(['NULL' => 'Alle Wohnungen'])->all();
+  $allLabel = $accent === 'sky' ? 'Alle Flächen' : 'Alle Wohnungen';
+  $availability = collect($options['availability'] ?? [])->replace(['NULL' => $allLabel])->all();
   $rooms = collect($options['rooms'] ?? [])->replace(['NULL' => 'Alle Zimmer'])->all();
   $floors = collect($options['floors'] ?? [])->replace(['NULL' => 'Alle Etagen'])->all();
 @endphp
