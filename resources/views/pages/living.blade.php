@@ -4,12 +4,14 @@
 @section('content')
 
 @php
-  $surroundingImages = [
-    '/img/shift-bild-umgebung-01',
-    '/img/shift-bild-umgebung-02',
-    '/img/shift-bild-umgebung-03',
-    '/img/shift-bild-umgebung-04',
-    '/img/shift-bild-umgebung-05',
+  $livingImages = [
+    '/img/cavegn-badenerstrasse-int-c01',
+    '/img/cavegn-badenerstrasse-int-c02',
+    '/img/cavegn-badenerstrasse-int-c04',
+    '/img/cavegn-badenerstrasse-int-c05',
+    '/img/cavegn-badenerstrasse-int-c06',
+    '/img/cavegn-badenerstrasse-int-c07',
+    '/img/cavegn-badenerstrasse-int-c08',
   ];
 
   $extras = [
@@ -36,7 +38,7 @@
     <p>Hohe Decken und grossflächige Fenster lassen Licht und Weite in jeden Raum fliessen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, authentisch und voller Identität. Warmes Eichenparkett und eine fein abgestimmte Farb- und Materialwelt in sanften Naturtönen schaffen dazu einen harmonischen Kontrast und verleihen den Räumen Ruhe, Wärme und zeitlose Eleganz. Die als Vier-Jahreszeiten-Zimmer konzipierten Loggien erweitern den Wohnraum auf natürliche Weise. Als geschützte Rückzugsorte bieten sie das ganze Jahr über vielfältige Nutzungsmöglichkeiten und bereichern die Wohnqualität zu jeder Jahreszeit.</p>
   </div>
   <x-slot:aside>
-    <x-gallery.carousel name="living-gallery" :images="$surroundingImages" />
+    <x-gallery.carousel name="living-gallery" :images="$livingImages" />
   </x-slot:aside>
 </x-sections.intro>
 

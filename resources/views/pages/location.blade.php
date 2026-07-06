@@ -5,12 +5,12 @@
 
 @php
   $locationImages = [
-    '/img/shift-bild-umgebung-01',
-    '/img/shift-bild-umgebung-02',
-    '/img/shift-bild-umgebung-03',
-    '/img/shift-bild-umgebung-04',
-    '/img/shift-bild-umgebung-05',
-    '/img/shift-bild-umgebung-06',
+    '/img/cavegn-badenerstrasse-umgebung-01',
+    '/img/cavegn-badenerstrasse-umgebung-02',
+    '/img/cavegn-badenerstrasse-umgebung-03',
+    '/img/cavegn-badenerstrasse-umgebung-04',
+    '/img/cavegn-badenerstrasse-umgebung-05',
+    '/img/cavegn-badenerstrasse-umgebung-06',
   ];
 
   $transitTable = [

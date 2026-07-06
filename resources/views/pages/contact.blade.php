@@ -18,14 +18,14 @@
       <div class="grid xl:grid-cols-2 gap-y-40 xl:gap-y-0 md:gap-x-60 mt-40 md:mt-60 max-w-8xl" data-reveal-children>
 
         <x-blocks.person
-          image="/img/shift-bild-profil-o-friedli"
+          image="/img/cavegn-badenerstrasse-profil-o-friedli"
           name="Olivia Friedli"
           role="Immobilienvermarkterin"
           phone="+41 43 537 33 53"
           email="shift@cavegn-immobilien.ch" />
 
         <x-blocks.person
-          image="/img/shift-bild-profil-l-razzino"
+          image="/img/cavegn-badenerstrasse-profil-l-razzino"
           name="Laura Razzino"
           role="Leiterin Immobilienvermarktung"
           phone="+41 43 537 33 53"

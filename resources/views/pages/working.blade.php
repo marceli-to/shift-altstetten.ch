@@ -4,12 +4,10 @@
 @section('content')
 
 @php
-  $surroundingImages = [
-    '/img/shift-bild-umgebung-01',
-    '/img/shift-bild-umgebung-02',
-    '/img/shift-bild-umgebung-03',
-    '/img/shift-bild-umgebung-04',
-    '/img/shift-bild-umgebung-05',
+  $workingImages = [
+    '/img/cavegn-badenerstrasse-int-c09',
+    '/img/cavegn-badenerstrasse-int-c03',
+    '/img/cavegn-badenerstrasse-int-c01',
   ];
 
   $extras = [
@@ -37,7 +35,7 @@
   </div>
   
   <x-slot:aside>
-    <x-gallery.carousel name="working-gallery" :images="$surroundingImages" />
+    <x-gallery.carousel name="working-gallery" :images="$workingImages" />
   </x-slot:aside>
 
 </x-sections.intro>

@@ -2,23 +2,22 @@
 @section('content')
 
 @php
-  $surroundingImages = [
-    '/img/shift-bild-umgebung-01',
-    '/img/shift-bild-umgebung-02',
-    '/img/shift-bild-umgebung-03',
-    '/img/shift-bild-umgebung-04',
-    '/img/shift-bild-umgebung-05',
+  $sliderImages = [
+    '/img/cavegn-badenerstrasse-ext-c01',
+    '/img/cavegn-badenerstrasse-int-c08',
+    '/img/cavegn-badenerstrasse-int-c09',
+    '/img/cavegn-badenerstrasse-int-c07',
   ];
   $artworkImages = [
-    '/img/shift-bild-kunst-am-bau-07',
-    '/img/shift-bild-kunst-am-bau-01',
-    '/img/shift-bild-kunst-am-bau-02',
-    '/img/shift-bild-kunst-am-bau-03',
-    '/img/shift-bild-kunst-am-bau-04',
-    '/img/shift-bild-kunst-am-bau-05',
-    '/img/shift-bild-kunst-am-bau-06',
-    '/img/shift-bild-kunst-am-bau-08',
-    '/img/shift-bild-kunst-am-bau-09',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-07',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-01',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-02',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-03',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-04',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-05',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-06',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-08',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-09',
   ];
   $stats = [
     ['number' => 45, 'label' => "moderne, lichtdurchflutete\nLoftwohnungen"],
@@ -50,7 +49,7 @@
 
   <div class="relative">
     <x-media.picture
-      src="/img/shift-bild-gebaeude-mobile"
+      src="/img/cavegn-badenerstrasse-ext-c02-mobile"
       alt="Shift Altstetten Gebäude"
       :width="392"
       :height="614"
@@ -77,7 +76,7 @@
   </div>
 
   <div>
-    <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
+    <x-gallery.carousel name="room-gallery" :images="$sliderImages" />
   </div>
 
   <div class="px-20 pt-60 pb-40" data-reveal>
@@ -119,7 +118,7 @@
   <x-layout.section class="relative">
 
     <x-media.picture
-      src="/img/shift-bild-gebaeude"
+      src="/img/cavegn-badenerstrasse-ext-c02"
       alt="Shift Altstetten Gebäude"
       :width="1920"
       :height="1080"
@@ -154,7 +153,7 @@
     </div>
 
     <x-slot:aside>
-      <x-gallery.carousel name="room-gallery" :images="$surroundingImages" />
+      <x-gallery.carousel name="room-gallery" :images="$sliderImages" />
     </x-slot:aside>
 
   </x-layout.split>
