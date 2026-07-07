@@ -18,7 +18,7 @@
 
     {{-- Isometry --}}
     <div class="mb-20 lg:mb-0 lg:order-2 lg:col-span-5 sticky top-80 lg:top-120 bg-white z-40 -mx-20 lg:mx-0 p-20 lg:p-0">
-      <x-objects.iso class="block w-full h-auto overflow-visible lg:mt-120 xl:mt-160" />
+      <x-objects.iso class="block w-full h-auto overflow-visible lg:mt-120 xl:mt-160 max-w-[70%] xl:max-w-[80%] mx-auto" />
     </div>
 
     {{-- Object tables --}}
