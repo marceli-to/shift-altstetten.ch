@@ -45,6 +45,7 @@
       </x-slot:icon>
       Schnittstellenpapier
     </x-links.icon>
+    </p>
 
   </div>
   
