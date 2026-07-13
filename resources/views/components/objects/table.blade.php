@@ -11,6 +11,16 @@
   $areaLabel = $accent === 'sky' ? 'Fläche' : 'WFL';
   $showRooms = $accent !== 'sky';
 
+  // Gewerbe (sky) is not handled via the emonitor application flow; instead of
+  // the "Anfrage" button it shows a "Kontakt" link pointing to the contact form.
+  $isCommercial = $accent === 'sky';
+  $applyLabel = $isCommercial ? 'Kontakt' : 'Anfrage';
+  // Column header above the apply link: Gewerbe uses "Kontakt", Wohnen "Anmeldung".
+  $applyColLabel = $isCommercial ? 'Kontakt' : 'Anmeldung';
+  $applyHref = $isCommercial ? route('page.contact') . '#formular' : '#';
+  $applyExternal = ! $isCommercial;
+  $applyKind = $isCommercial ? 'Gewerbefläche' : 'Wohnung';
+
   $stateDot = ['free' => 'bg-state-free', 'reserved' => 'bg-state-reserved', 'taken' => 'bg-state-taken'];
   $stateLabel = ['reserved' => 'reserviert', 'taken' => 'vermietet'];
 
@@ -44,7 +54,7 @@
         <th class="text-right">Netto</th>
         <th class="text-right">NK</th>
         <th class="text-center px-20">Plan</th>
-        <th class="text-right pr-20">Anmeldung</th>
+        <th class="text-right pr-20">{{ $applyColLabel }}</th>
       </tr>
     </thead>
     <tbody>
@@ -113,13 +123,12 @@
           <td class="text-right pr-20">
             @if($state === 'free')
               <a
-                href="#"
-                target="_blank" 
-                rel="noopener"
-                aria-label="Anfrage für Wohnung {{ $apartment['title'] }}"
+                href="{{ $applyHref }}"
+                @if($applyExternal) target="_blank" rel="noopener" @endif
+                aria-label="{{ $applyLabel }} für {{ $applyKind }} {{ $apartment['title'] }}"
                 @click.stop
                 class="inline-flex items-center rounded-full border font-normal uppercase border-cocoa px-10 py-4">
-                Anfrage
+                {{ $applyLabel }}
               </a>
             @else
               &nbsp;
@@ -139,7 +148,7 @@
   <div class="grid grid-cols-[1fr_1fr_1fr_16px] items-center px-20 h-54 text-[20px] font-bold text-cocoa {{ $accentBg }}">
     <span>{{ $showRooms ? 'Zimmer' : 'Nr' }}</span>
     <span>Preis/Mt.</span>
-    <span>Anmeldung</span>
+    <span>{{ $applyColLabel }}</span>
     <span></span>
   </div>
 
@@ -187,13 +196,12 @@
           <span>
             @if($state === 'free')
               <a
-                href="#"
-                target="_blank" 
-                rel="noopener"
-                aria-label="Anfrage für Wohnung {{ $apartment['title'] }}"
+                href="{{ $applyHref }}"
+                @if($applyExternal) target="_blank" rel="noopener" @endif
+                aria-label="{{ $applyLabel }} für {{ $applyKind }} {{ $apartment['title'] }}"
                 @click.stop
                 class="inline-flex items-center rounded-full border font-normal uppercase border-cocoa px-10 py-4">
-                Anfrage
+                {{ $applyLabel }}
               </a>
             @else
               &nbsp;

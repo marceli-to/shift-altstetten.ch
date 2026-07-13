@@ -1,6 +1,7 @@
 @props([
   'name',
   'id' => null,
+  'required' => false,
 ])
 
 @php $id ??= $name; @endphp
@@ -14,6 +15,7 @@
     id="{{ $id }}"
     value="1"
     @checked(old($name))
+    @if($required) required @endif
     class="mt-3 w-18 h-18 shrink-0 accent-cocoa">
   <span>Ich habe die <a href="{{ route('page.privacy') }}" target="_blank" class="underline underline-offset-4 decoration-1 hover:no-underline">Datenschutzerklärung</a> gelesen und akzeptiere diese.</span>
 </label>

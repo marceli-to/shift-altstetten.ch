@@ -58,8 +58,7 @@
           <form
             method="POST"
             action="{{ route('contact.send') }}"
-            class="mt-30 md:mt-40 grid gap-y-16"
-            novalidate>
+            class="mt-30 md:mt-40 grid gap-y-16">
             @csrf
 
             {{-- Honeypot: hidden from real users --}}
@@ -79,7 +78,7 @@
             <x-forms.textarea name="message" placeholder="Nachricht" />
 
             <div class="mt-4">
-              <x-forms.checkbox name="privacy" />
+              <x-forms.checkbox name="privacy" required />
             </div>
 
             <div class="mt-10">

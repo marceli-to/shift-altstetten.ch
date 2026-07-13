@@ -31,7 +31,7 @@
       </x-links.icon>
     </p>
     <p>
-    <x-links.icon href="#">
+    <x-links.icon href="/downloads/Anmeldeformular_fuer_Mietinteressenten.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
