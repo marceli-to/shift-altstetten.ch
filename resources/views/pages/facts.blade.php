@@ -18,10 +18,10 @@
             <x-accordion.button title="Angebot" />
             <x-accordion.content>
               <ul>
-                <li>45 Mietwohnungen mit 1.5-, 2.5- und 3.5-Zimmerwohnungen</li>
+                <li>45 Mietwohnungen mit 1.5-, 2.5- und 3.5-Zimmern</li>
                 <li>12 Büros/Ateliers</li>
-                <li>10 Lagerflächen/Gewerberäume</li>
-                <li>Begrenzte Anzahl Parkplätze vorhanden</li>
+                <li>10 Lager-/Hobbyräume</li>
+                <li>Begrenzte Anzahl Parkplätze auf Anfrage</li>
               </ul>
             </x-accordion.content>
           </x-accordion.item>
