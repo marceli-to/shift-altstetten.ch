@@ -26,7 +26,7 @@
       <x-objects.table :apartments="$apartments" :accent="$accent" />
 
       @if(!empty($extras))
-        <x-objects.extras :items="$extras" :accent="$accent" />
+        {{-- <x-objects.extras :items="$extras" :accent="$accent" /> --}}
       @endif
     </div>
 
