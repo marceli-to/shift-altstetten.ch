@@ -24,8 +24,12 @@
 <x-sections.intro class="bg-blush">
   <div data-reveal>
     <x-headings.h1>Hier wird Wohnen zum Gefühl.</x-headings.h1>
-    <p>Durch die sorgfältige Transformation entstehen 45 lichtdurchflutete Loftwohnungen mit 1.5, 2.5 und 3.5 Zimmern.</p>
+    <p>Durch die sorgfältige Transformation entstehen 45 lichtdurchflutete Loftwohnungen mit 1.5-, 2.5- und 3.5-Zimmern.</p>
 
+   
+
+    {{-- <p>Hohe Decken und grossflächige Fenster lassen Licht und Weite in jeden Raum fliessen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, authentisch und voller Identität. Warmes Eichenparkett und eine fein abgestimmte Farb- und Materialwelt in sanften Naturtönen schaffen dazu einen harmonischen Kontrast und verleihen den Räumen Ruhe, Wärme und zeitlose Eleganz. Die als Vier-Jahreszeiten-Zimmer konzipierten Loggien erweitern den Wohnraum auf natürliche Weise. Als geschützte Rückzugsorte bieten sie das ganze Jahr über vielfältige Nutzungsmöglichkeiten und bereichern die Wohnqualität zu jeder Jahreszeit.</p> --}}
+    <p>Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, authentisch und voller Identität. Die hochwertige Materialisierung und die aufeinander abgestimmte Farb- und Materialwelt in sanften Naturtönen schaffen einen harmonischen Kontrast und verleihen den Räumen Wärme, Ruhe und zeitlose Eleganz. Die als Vier-Jahreszeiten-Zimmer gestalteten Loggien erweitern den Wohnraum und bereichern die Wohnqualität das ganze Jahr über.</p>
     <p>
       <x-links.icon href="#angebot">
         <x-slot:icon>
@@ -34,8 +38,6 @@
         Zu den Wohnungen
       </x-links.icon>
     </p>
-
-    <p>Hohe Decken und grossflächige Fenster lassen Licht und Weite in jeden Raum fliessen. Die sichtbaren Stützen und Träger erzählen von der Geschichte des Gebäudes – roh, authentisch und voller Identität. Warmes Eichenparkett und eine fein abgestimmte Farb- und Materialwelt in sanften Naturtönen schaffen dazu einen harmonischen Kontrast und verleihen den Räumen Ruhe, Wärme und zeitlose Eleganz. Die als Vier-Jahreszeiten-Zimmer konzipierten Loggien erweitern den Wohnraum auf natürliche Weise. Als geschützte Rückzugsorte bieten sie das ganze Jahr über vielfältige Nutzungsmöglichkeiten und bereichern die Wohnqualität zu jeder Jahreszeit.</p>
   </div>
   <x-slot:aside>
     <x-gallery.carousel name="living-gallery" :images="$livingImages" />
@@ -47,15 +49,16 @@
   <div class="flex flex-col gap-y-30 md:grid md:grid-cols-3 md:gap-20 pr-44 md:pr-0">
     <x-sections.feature-item>
       <x-headings.h3>Weite.</x-headings.h3>
-      <p>Vergangenes wird bewahrt, Neues mit Sorgfalt ergänzt. So entstehen Lofts mit eigenem Ausdruck. Hohe Decken, viel Licht und die unverwechselbare Handschrift des Hauses verleihen den Räumen eine besondere Präsenz. Ein Zuhause, das Raum zum Leben gibt.</p>
+      <p>Vergangenes wird bewahrt, Neues mit Sorgfalt ergänzt. So entstehen Lofts mit eigenem Ausdruck. Licht, Höhe und Grosszügigkeit prägen das Wohnerlebnis. Hohe Decken und grossflächige Fenster eröffnen ein einzigartiges Raumgefühl, während die historische Bausubstanz den Räumen ihren unverwechselbaren Charakter verleiht. Ein Zuhause, das Raum zum Leben gibt.</p>
+      {{-- <p>Vergangenes wird bewahrt, Neues mit Sorgfalt ergänzt. So entstehen Lofts mit eigenem Ausdruck. Hohe Decken, viel Licht und die unverwechselbare Handschrift des Hauses verleihen den Räumen eine besondere Präsenz. Ein Zuhause, das Raum zum Leben gibt.</p> --}}
     </x-sections.feature-item>
     <x-sections.feature-item>
       <x-headings.h3>Ruhe.</x-headings.h3>
-      <p>Rückzug mitten im Leben.<br>Die Loggia wird zum Lieblingsplatz und die Dachterrasse zum Fenster über die Stadt. Zwischen urbaner Energie und stillen Momenten entsteht eine neue Form von Geborgenheit – ein Rückzugsort, der mit den Jahreszeiten lebt und Raum für kleine Auszeiten schafft.</p>
+      <p>Rückzug mitten im Leben.<br>Die Loggia wird zum Lieblingsplatz und die Dachterrasse zum Fenster über die Stadt. Zwischen urbaner Energie und stillen Momenten entsteht ein Rückzugsort, der mit den Jahreszeiten lebt und Raum für kleine Auszeiten schafft.</p>
     </x-sections.feature-item>
     <x-sections.feature-item>
       <x-headings.h3>Möglichkeit.</x-headings.h3>
-      <p>Wo Ideen entstehen und Zuhause beginnt.<br>Arbeiten, wo das Leben stattfindet. Denken, ohne Wege. Zusätzliche Büroflächen schaffen Raum für Kreativität, Fokus und neue Perspektiven. Und wenn der Tag endet, wartet das Zuhause nur wenige Schritte entfernt. Weil sich Leben und Arbeiten nicht trennen müssen – wenn beides am richtigen Ort zusammenkommt.</p>
+      <p>Arbeiten, wo das Leben stattfindet. Denken, ohne Wege. Zusätzliche Büroflächen schaffen Raum für Kreativität, Fokus und neue Perspektiven. Und wenn der Tag endet, wartet das Zuhause nur wenige Schritte entfernt. Denn Wohnen und Arbeiten müssen sich nicht trennen, wenn beides am richtigen Ort zusammenkommt.</p>
     </x-sections.feature-item>
   </div>
   <div class="mt-30 md:mt-40 flex flex-col gap-y-10">

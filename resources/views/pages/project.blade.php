@@ -3,10 +3,10 @@
 
 @php
   $sliderImages = [
-    '/img/cavegn-badenerstrasse-ext-c01',
-    '/img/cavegn-badenerstrasse-int-c08',
-    '/img/cavegn-badenerstrasse-int-c09',
-    '/img/cavegn-badenerstrasse-int-c07',
+  '/img/cavegn-badenerstrasse-ext-c01',
+  '/img/cavegn-badenerstrasse-int-c07',
+  '/img/cavegn-badenerstrasse-int-c09',
+  '/img/cavegn-badenerstrasse-int-c08',
   ];
   $artworkImages = [
     '/img/cavegn-badenerstrasse-kunst-am-bau-07',
@@ -25,9 +25,9 @@
     ['number' => 10, 'label' => "beheizte Lager-/\nHobbyräume mit Tageslicht"],
   ];
 
-  $introTitle = 'SHIFT. Zürich Altstetten';
+  $introTitle = 'SHIFT. Zürich Altstetten.';
   $introText = [
-    '<p>Wo einst gearbeitet wurde, entsteht heute Raum zum Leben, Arbeiten und Ankommen. Die ehemalige Gewerbeliegenschaft an der Badenerstrasse 587–589 wird sorgfältig in grosszügige Loftwohnungen und Kleingewerbeflächen mit industriellem Flair transformiert.</p>',
+    '<p>Wo einst gearbeitet wurde, entsteht heute Raum zum Leben, Arbeiten und Ankommen. Die ehemalige Gewerbeliegenschaft an der <span class="whitespace-nowrap">Badenerstrasse&nbsp;587–589</span> wird sorgfältig in grosszügige Loftwohnungen und Kleingewerbeflächen mit industriellem Flair transformiert.</p>',
     '<p>Urban. Charakterstark. Unverwechselbar.<br>Vielleicht schon bald Ihr neues Zuhause.<br>Oder der Ort, an dem aus Ideen Wirklichkeit wird.</p>',
   ];
 
