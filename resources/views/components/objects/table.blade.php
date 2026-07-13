@@ -15,6 +15,17 @@
   $roomLabel = fn ($r) => rtrim(rtrim(number_format((float) $r, 1, '.', ''), '0'), '.');
   $price = fn ($v) => $v ? 'CHF ' . number_format($v, 0, '.', '’') : '–';
 
+  // Show net rent plus incidental costs, e.g. "CHF 2’990 + 320". Melon exposes
+  // rentalgross_net directly; the mock only has the gross, so derive the net
+  // from gross minus incidentals as a fallback.
+  $priceNet = function ($apt) {
+    $incid = (int) ($apt['incidentals'] ?? 0);
+    $net = $apt['rentalgross_net'] ?? (isset($apt['rentalgross']) ? (int) $apt['rentalgross'] - $incid : null);
+    return $net !== null
+      ? 'CHF ' . number_format($net, 0, '.', '’') . ' + ' . number_format($incid, 0, '.', '’')
+      : '–';
+  };
+
   // Shared grid template so the mobile column header and every row stay aligned.
   $mobileGrid = '';
 @endphp
@@ -73,8 +84,8 @@
             {{ $outside ?? '–' }}
           </td>
 
-          <td class="text-right font-bold whitespace-nowrap">
-            {{ $state === 'free' ? $price($apartment['rentalgross'] ?? null) : ($stateLabel[$state] ?? '') }}
+          <td class="text-right whitespace-nowrap font-normal! text-[15px] xl:text-[17px]">
+            {{ $state === 'free' ? $priceNet($apartment) : ($stateLabel[$state] ?? '') }}
           </td>
 
           <td class="text-center">
@@ -152,8 +163,8 @@
           {{ $roomLabel($apartment['rooms'] ?? 0) }}
         </span>
 
-        <span>
-          {{ $state === 'free' ? $price($apartment['rentalgross'] ?? null) : ($stateLabel[$state] ?? '') }}
+        <span class="font-normal text-[15px] leading-tight">
+          {{ $state === 'free' ? $priceNet($apartment) : ($stateLabel[$state] ?? '') }}
         </span>
 
         
