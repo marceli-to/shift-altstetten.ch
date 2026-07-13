@@ -9,15 +9,15 @@
   '/img/cavegn-badenerstrasse-int-c08',
   ];
   $artworkImages = [
-    '/img/cavegn-badenerstrasse-kunst-am-bau-07',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-07-v2',
     '/img/cavegn-badenerstrasse-kunst-am-bau-01',
     '/img/cavegn-badenerstrasse-kunst-am-bau-02',
     '/img/cavegn-badenerstrasse-kunst-am-bau-03',
     '/img/cavegn-badenerstrasse-kunst-am-bau-04',
     '/img/cavegn-badenerstrasse-kunst-am-bau-05',
     '/img/cavegn-badenerstrasse-kunst-am-bau-06',
-    '/img/cavegn-badenerstrasse-kunst-am-bau-08',
-    '/img/cavegn-badenerstrasse-kunst-am-bau-09',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-08-v2',
+    '/img/cavegn-badenerstrasse-kunst-am-bau-09-v2',
   ];
   $stats = [
     ['number' => 45, 'label' => "moderne, lichtdurchflutete\nLoftwohnungen"],
