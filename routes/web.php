@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApartmentController;
+use App\Http\Controllers\ContactController;
 
 Route::view('/', 'pages.project')->name('page.project');
 Route::get('/wohnen', [ApartmentController::class, 'living'])->name('page.living');
@@ -8,5 +9,6 @@ Route::get('/arbeiten', [ApartmentController::class, 'working'])->name('page.wor
 Route::view('/lage', 'pages.location')->name('page.location');
 Route::view('/facts', 'pages.facts')->name('page.facts');
 Route::view('/kontakt', 'pages.contact')->name('page.contact');
+Route::post('/kontakt', [ContactController::class, 'send'])->name('contact.send');
 Route::view('/impressum', 'pages.imprint')->name('page.imprint');
 Route::view('/datenschutz', 'pages.privacy')->name('page.privacy');
