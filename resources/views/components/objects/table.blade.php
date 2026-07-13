@@ -6,8 +6,10 @@
   // Same tint as the row hover, applied when the matching iso shape is hovered.
   $accentBgActive = $accent === 'sky' ? '[&.is-active]:bg-sky/20' : '[&.is-active]:bg-blush/20';
 
-  // Wohnen shows the Wohnfläche (WFL); Gewerbe keeps its own area label.
-  $areaLabel = $accent === 'sky' ? 'BWF' : 'WFL';
+  // Wohnen shows the Wohnfläche (WFL); Gewerbe just labels it Fläche and has
+  // no room count, so its Zimmer column is dropped.
+  $areaLabel = $accent === 'sky' ? 'Fläche' : 'WFL';
+  $showRooms = $accent !== 'sky';
 
   $stateDot = ['free' => 'bg-state-free', 'reserved' => 'bg-state-reserved', 'taken' => 'bg-state-taken'];
   $stateLabel = ['reserved' => 'reserviert', 'taken' => 'vermietet'];
@@ -36,9 +38,9 @@
       <tr class="font-bold text-cocoa {{ $accentBg }} [&>th]:h-46 [&>th]:leading-none">
         <th class="pl-20">Nr</th>
         <th>Etage</th>
-        <th>Zi</th>
+        @if($showRooms)<th>Zi</th>@endif
         <th class="text-right">{{ $areaLabel }}</th>
-        <th class="text-right">AF</th>
+        @if($showRooms)<th class="text-right">AF</th>@endif
         <th class="text-right">Netto</th>
         <th class="text-right">NK</th>
         <th class="text-center px-20">Plan</th>
@@ -72,17 +74,21 @@
             {{ $apartment['floor'] ?? '–' }}
           </td>
           
+          @if($showRooms)
           <td>
             {{ $roomLabel($apartment['rooms'] ?? 0) }}
           </td>
+          @endif
 
           <td class="text-right">
             {{ $apartment['area'] ?? '–' }}
           </td>
 
+          @if($showRooms)
           <td class="text-right">
             {{ $outside ?? '–' }}
           </td>
+          @endif
 
           @php [$net, $incid] = $priceParts($apartment); @endphp
           <td class="text-right whitespace-nowrap">
@@ -131,7 +137,7 @@
 
   {{-- Column header --}}
   <div class="grid grid-cols-[1fr_1fr_1fr_16px] items-center px-20 h-54 text-[20px] font-bold text-cocoa {{ $accentBg }}">
-    <span>Zimmer</span>
+    <span>{{ $showRooms ? 'Zimmer' : 'Nr' }}</span>
     <span>Preis/Mt.</span>
     <span>Anmeldung</span>
     <span></span>
@@ -166,7 +172,7 @@
 
         <span class="flex items-center gap-x-8 -ml-10">
           <span class="inline-block w-9 h-9 shrink-0 rounded-full {{ $stateDot[$state] ?? 'bg-state-taken' }}"></span>
-          {{ $roomLabel($apartment['rooms'] ?? 0) }}
+          {{ $showRooms ? $roomLabel($apartment['rooms'] ?? 0) : $apartment['title'] }}
         </span>
 
         <span class="font-normal text-[15px] leading-tight">
@@ -208,10 +214,12 @@
         class="pl-25 pr-20 pb-10">
 
         <dl class="border-t border-cocoa pt-5">
+          @if($showRooms)
           <div class="flex justify-between py-8">
             <dt>Nr</dt>
             <dd>{{ $apartment['title'] }}</dd>
           </div>
+          @endif
           <div class="flex justify-between py-8">
             <dt>{{ $areaLabel }}:</dt>
             <dd>{{ $apartment['area'] ?? '–' }} m²</dd>
@@ -220,10 +228,12 @@
             <dt>Etage:</dt>
             <dd>{{ $apartment['floor'] ?? '–' }}</dd>
           </div>
+          @if($showRooms)
           <div class="flex justify-between py-8">
             <dt>Aussenfläche:</dt>
             <dd>{{ $outside ?? '–' }} m²</dd>
           </div>
+          @endif
           <div class="flex justify-between py-8">
             <dt>Netto/Mt.:</dt>
             <dd>{{ $chf($net) }}</dd>
