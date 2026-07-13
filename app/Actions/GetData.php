@@ -9,42 +9,17 @@ class GetData
 {
   public function execute(): Collection
   {
-    $order = $this->isometryOrder();
+    // Position of each object in the counter-clockwise, per-floor isometry
+    // order (config/estate.php), keyed by lowercase title.
+    $order = array_flip(config('estate.order', []));
 
     return collect($this->source())
       ->map(fn ($object) => $this->normalize($object))
-      // Order the rows to match the counter-clockwise, per-floor arrangement of
-      // the isometry (the single source of truth for object sequencing), not the
-      // alphabetical object number. Objects absent from the isometry sort to the
-      // end, keeping their original relative order.
+      // Order the rows to run counter-clockwise around each floor as arranged in
+      // the isometry, not by the alphabetical object number. Objects missing
+      // from the order sort to the end, keeping their original relative order.
       ->sortBy(fn ($object) => $order[strtolower($object['title'] ?? '')] ?? PHP_INT_MAX)
       ->values();
-  }
-
-  /**
-   * Map of lowercase object title => drawing position in the isometry.
-   *
-   * iso.blade.php is authored in the project's counter-clockwise, per-floor
-   * reading order, so its `data-iso` sequence doubles as the canonical sort
-   * order for the object tables. Reading it here keeps the two in sync.
-   */
-  private function isometryOrder(): array
-  {
-    $path = resource_path('views/components/objects/iso.blade.php');
-
-    if (!is_file($path)) {
-      return [];
-    }
-
-    preg_match_all('/data-iso="([^"]+)"/', file_get_contents($path), $matches);
-
-    $order = [];
-    foreach ($matches[1] as $key) {
-      // First occurrence wins; some ids are drawn twice where floors overlap.
-      $order[$key] ??= count($order);
-    }
-
-    return $order;
   }
 
   /**
