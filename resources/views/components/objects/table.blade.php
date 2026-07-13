@@ -15,16 +15,15 @@
   $roomLabel = fn ($r) => rtrim(rtrim(number_format((float) $r, 1, '.', ''), '0'), '.');
   $price = fn ($v) => $v ? 'CHF ' . number_format($v, 0, '.', '’') : '–';
 
-  // Show net rent plus incidental costs, e.g. "CHF 2’990 + 320". Melon exposes
+  // Net rent and incidental costs shown in separate columns. Melon exposes
   // rentalgross_net directly; the mock only has the gross, so derive the net
   // from gross minus incidentals as a fallback.
-  $priceNet = function ($apt) {
+  $priceParts = function ($apt) {
     $incid = (int) ($apt['incidentals'] ?? 0);
     $net = $apt['rentalgross_net'] ?? (isset($apt['rentalgross']) ? (int) $apt['rentalgross'] - $incid : null);
-    return $net !== null
-      ? 'CHF ' . number_format($net, 0, '.', '’') . ' + ' . number_format($incid, 0, '.', '’')
-      : '–';
+    return [$net, $incid];
   };
+  $chf = fn ($v) => $v !== null ? 'CHF ' . number_format((float) $v, 0, '.', '’') : '–';
 
   // Shared grid template so the mobile column header and every row stay aligned.
   $mobileGrid = '';
@@ -32,7 +31,7 @@
 
 {{-- Desktop: full table --}}
 <div class="hidden lg:block">
-  <table class="w-full text-left text-[18px] xl:text-[20px]" data-objects>
+  <table class="w-full text-left text-[16px] xl:text-[18px]" data-objects>
     <thead>
       <tr class="font-bold text-cocoa {{ $accentBg }} [&>th]:h-46 [&>th]:leading-none">
         <th class="pl-20">Nr</th>
@@ -40,7 +39,8 @@
         <th>Zi</th>
         <th class="text-right">{{ $areaLabel }}</th>
         <th class="text-right">AF</th>
-        <th class="text-right">Preis/Mt.</th>
+        <th class="text-right">Netto</th>
+        <th class="text-right">NK</th>
         <th class="text-center px-20">Plan</th>
         <th class="text-right pr-20">Anmeldung</th>
       </tr>
@@ -59,7 +59,7 @@
           data-object-state="{{ $state }}"
           data-object-rooms="{{ $apartment['rooms'] }}"
           data-object-floor="{{ $apartment['floor'] }}"
-          class="border-b border-cocoa [&>td]:font-bold [&>td]:h-54 {{ $accentBgHover }} {{ $accentBgActive }}">
+          class="border-b border-cocoa [&>td]:h-54 {{ $accentBgHover }} {{ $accentBgActive }}">
 
           <td class="pl-4">
             <div class="flex items-center gap-x-8">
@@ -84,8 +84,13 @@
             {{ $outside ?? '–' }}
           </td>
 
-          <td class="text-right whitespace-nowrap font-normal! text-[15px] xl:text-[17px]">
-            {{ $state === 'free' ? $priceNet($apartment) : ($stateLabel[$state] ?? '') }}
+          @php [$net, $incid] = $priceParts($apartment); @endphp
+          <td class="text-right whitespace-nowrap">
+            {{ $state === 'free' ? $chf($net) : ($stateLabel[$state] ?? '') }}
+          </td>
+
+          <td class="text-right whitespace-nowrap">
+            {{ $state === 'free' ? $chf($incid) : '' }}
           </td>
 
           <td class="text-center">
@@ -138,6 +143,7 @@
       $plan = $apartment['layout_plan'] ?? null;
       $apply = $apartment['application_form'] ?? null;
       $outside = $apartment['balcony_area'] ?? $apartment['terrace_area'] ?? $apartment['loggia_area'] ?? null;
+      [$net, $incid] = $priceParts($apartment);
     @endphp
     <div
       data-filterable
@@ -164,7 +170,11 @@
         </span>
 
         <span class="font-normal text-[15px] leading-tight">
-          {{ $state === 'free' ? $priceNet($apartment) : ($stateLabel[$state] ?? '') }}
+          @if($state === 'free')
+            {{ $chf($net) }}<br><span class="text-cocoa/70">+ {{ number_format($incid, 0, '.', '’') }} NK</span>
+          @else
+            {{ $stateLabel[$state] ?? '' }}
+          @endif
         </span>
 
         
@@ -213,6 +223,14 @@
           <div class="flex justify-between py-8">
             <dt>Aussenfläche:</dt>
             <dd>{{ $outside ?? '–' }} m²</dd>
+          </div>
+          <div class="flex justify-between py-8">
+            <dt>Netto/Mt.:</dt>
+            <dd>{{ $chf($net) }}</dd>
+          </div>
+          <div class="flex justify-between py-8">
+            <dt>Nebenkosten:</dt>
+            <dd>{{ $chf($incid) }}</dd>
           </div>
         </dl>
 
