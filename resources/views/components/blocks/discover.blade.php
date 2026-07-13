@@ -25,8 +25,8 @@
       href="{{ route('page.working') }}"
       class="group flex gap-x-5 h-auto"
       aria-label="Zu den Gewerberäumen">
-      <span class="w-5 {{ $barColor }} {{ $roundedClass }} transition-colors group-hover:bg-blush"></span>
-      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 transition-colors group-hover:text-blush {{ $textSize }}">Gewerbe</span>
+      <span class="w-5 {{ $barColor }} {{ $roundedClass }} transition-colors group-hover:bg-sky"></span>
+      <span class="[writing-mode:vertical-rl] rotate-180 self-end pt-3 pb-5 transition-colors group-hover:text-sky {{ $textSize }}">Gewerbe</span>
     </a>
   </div>
 </div>
