@@ -6,6 +6,9 @@
   // Same tint as the row hover, applied when the matching iso shape is hovered.
   $accentBgActive = $accent === 'sky' ? '[&.is-active]:bg-sky/20' : '[&.is-active]:bg-blush/20';
 
+  // Wohnen shows the Wohnfläche (WFL); Gewerbe keeps its own area label.
+  $areaLabel = $accent === 'sky' ? 'BWF' : 'WFL';
+
   $stateDot = ['free' => 'bg-state-free', 'reserved' => 'bg-state-reserved', 'taken' => 'bg-state-taken'];
   $stateLabel = ['reserved' => 'reserviert', 'taken' => 'vermietet'];
 
@@ -24,7 +27,7 @@
         <th class="pl-20">Nr</th>
         <th>Etage</th>
         <th>Zi</th>
-        <th class="text-right">BWF</th>
+        <th class="text-right">{{ $areaLabel }}</th>
         <th class="text-right">AF</th>
         <th class="text-right">Preis/Mt.</th>
         <th class="text-center px-20">Plan</th>
@@ -189,7 +192,7 @@
             <dd>{{ $apartment['title'] }}</dd>
           </div>
           <div class="flex justify-between py-8">
-            <dt>BWF:</dt>
+            <dt>{{ $areaLabel }}:</dt>
             <dd>{{ $apartment['area'] ?? '–' }} m²</dd>
           </div>
           <div class="flex justify-between py-8">
