@@ -33,14 +33,14 @@
 
       </div>
 
-      <div id="formular" class="scroll-mt-100 mt-60 md:mt-80 max-w-4xl">
+      <div id="formular" class="scroll-mt-100 md:scroll-mt-130 mt-60 md:mt-80 max-w-4xl">
 
         <x-headings.h2>
           Kontaktformular
         </x-headings.h2>
 
         <x-layout.article>
-          <p>Sie interessieren sich für eine Wohnung oder Gewerbefläche in SHIFT? Füllen Sie das Formular aus und wir senden Ihnen gerne weiterführende Informationen zu.</p>
+          <p>Haben Sie Fragen zu SHIFT oder wünschen Sie weiterführende Informationen? Füllen Sie das Formular aus und wir melden uns gerne bei Ihnen. Für Wohnungen erfolgt die Anmeldung direkt über den Anmeldelink in der Wohnungsliste.</p>
         </x-layout.article>
 
         @if(session('success'))
