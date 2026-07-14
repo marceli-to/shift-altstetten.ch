@@ -65,7 +65,7 @@
     </x-sections.feature-item>
   </div>
 
-  <div class="mt-30 md:mt-40 flex flex-col gap-y-10">
+  <div class="mt-30 md:mt-40">
     <p>
     <x-links.icon href="#">
       <x-slot:icon>
