@@ -2,7 +2,8 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-document.querySelectorAll('.swiper').forEach((el) => {
+// Die Lightbox bringt ihren eigenen Swiper mit (siehe lightbox.js).
+document.querySelectorAll('.swiper:not([data-lightbox-swiper])').forEach((el) => {
   const root = el.parentElement;
 
   new Swiper(el, {

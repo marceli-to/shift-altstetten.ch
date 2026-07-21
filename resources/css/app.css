@@ -43,6 +43,11 @@ main li {
   @apply h-full;
 }
 
+/* Scroll sperren, solange die Lightbox offen ist */
+.lightbox-open {
+  @apply overflow-hidden!;
+}
+
 /* Swiper pagination dots */
 .swiper-pagination {
   @apply flex justify-center gap-8;

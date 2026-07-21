@@ -6,5 +6,6 @@
       @yield('content')
     </x-layout.main>
     <x-layout.footer />
+    <x-gallery.lightbox />
   </x-layout.body>
 </x-layout.html>
