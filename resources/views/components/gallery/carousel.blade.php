@@ -6,12 +6,13 @@
 ])
 
 @php
-  // Für die Lightbox wird – sofern vorhanden – eine hochauflösende Variante
-  // mit dem Suffix "-2400" verwendet (z.B. /img/foo-2400.jpg).
-  $lightboxItems = collect($images)->map(fn ($image) => [
-    'src' => $image,
-    'large' => file_exists(public_path($image . '-2400.jpg')) ? $image . '-2400' : null,
-  ])->all();
+  // Für die Lightbox wird – sofern vorhanden – die unbeschnittene Variante
+  // mit dem Suffix "-detail" verwendet (z.B. /img/foo-detail.jpg). Sie zeigt
+  // das Originalformat des Renderings, während im Carousel der 4:3-Ausschnitt
+  // läuft; deshalb sind die beiden Varianten nicht im selben srcset.
+  $lightboxItems = collect($images)
+    ->map(fn ($image) => file_exists(public_path($image . '-detail.jpg')) ? $image . '-detail' : $image)
+    ->all();
 @endphp
 
 <div

@@ -2,11 +2,6 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 
-// Breiten der Bildvarianten. Die Basisbilder liegen mit 1440px vor, die
-// optionale "-2400"-Variante wird in gallery/carousel.blade.php erkannt.
-const BASE_WIDTH = 1440;
-const LARGE_WIDTH = 2400;
-
 const root = document.querySelector('[data-lightbox]');
 
 if (root) {
@@ -18,17 +13,14 @@ if (root) {
   let swiper = null;
   let previouslyFocused = null;
 
-  const srcset = (item, ext) =>
-    item.large
-      ? `${item.src}.${ext} ${BASE_WIDTH}w, ${item.large}.${ext} ${LARGE_WIDTH}w`
-      : `${item.src}.${ext}`;
-
-  const slideHtml = (item) => `
+  // Die Pfade kommen ohne Endung aus dem Carousel (data-lightbox-gallery) und
+  // zeigen, wo vorhanden, auf die unbeschnittene "-detail"-Variante.
+  const slideHtml = (src) => `
     <div class="swiper-slide flex items-center justify-center">
       <picture class="block w-full h-full">
-        <source srcset="${srcset(item, 'avif')}" sizes="100vw" type="image/avif">
-        <source srcset="${srcset(item, 'webp')}" sizes="100vw" type="image/webp">
-        <img src="${item.src}.jpg" alt="" class="w-full h-full object-contain" />
+        <source srcset="${src}.avif" type="image/avif">
+        <source srcset="${src}.webp" type="image/webp">
+        <img src="${src}.jpg" alt="" class="w-full h-full object-contain" />
       </picture>
     </div>`;
 
