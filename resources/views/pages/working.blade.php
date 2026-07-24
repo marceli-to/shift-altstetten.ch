@@ -20,7 +20,10 @@
   <div data-reveal>
 
     <x-headings.h1>Wo Ideen Raum bekommen.</x-headings.h1>
-    <p>Die Büros entlang der Badenerstrasse sind Teil des Gesamtkonzepts, das Wohnen und Arbeiten auf natürliche Weise miteinander verbindet – für Bewohnerinnen und Bewohner ebenso wie für externe Nutzer. </p><p>Die vollständig ausgebauten Räume mit hochwertigem Parkett und integrierten Teeküchen schaffen ein repräsentatives Arbeitsumfeld mit idealen Voraussetzungen für produktives Arbeiten und neue Ideen. WC-Anlagen stehen auf jeder Etage zur gemeinschaftlichen Nutzung zur Verfügung. Ob Homeoffice, Start-up oder eigenes KMU – hier findet Arbeit ihren Platz und Inspiration ihren Raum.</p>
+    <p>Die Büros entlang der Badenerstrasse sind Teil eines Gesamtkonzepts, das Wohnen und Arbeiten auf natürliche Weise vereint – sowohl für Bewohnerinnen und Bewohner als auch für externe Nutzer.</p>
+    <p>
+      Die vollständig ausgebauten Räume mit hochwertigem Parkett und integrierten Teeküchen bieten ein repräsentatives Arbeitsumfeld und ideale Voraussetzungen für produktives Arbeiten und kreative Ideen. Auf jeder Etage stehen WC-Anlagen zur gemeinschaftlichen Nutzung bereit. Ob Homeoffice, Start-up oder eigenes KMU – hier findet Ihre Arbeit den passenden Platz und Ihre Inspiration den nötigen Raum.
+    </p>
 
     <p>
       <x-links.icon href="#angebot">
@@ -60,14 +63,13 @@
   <div class="pr-44 md:pr-0">
     <x-sections.feature-item class="md:max-w-1/2!">
       <x-headings.h3>Lager-/Hobbyräume</x-headings.h3>
-      <p>Im Untergeschoss stehen beheizte Lager- und Hobbyräume mit natürlichem Tageslicht zur Verfügung. Weit mehr als klassische Nebenräume, schaffen sie Platz für Kreativität, Handwerk und persönliche Leidenschaften. Ein Ort zum Werkeln, Gestalten, Sammeln oder einfach für all das, was im Alltag seinen eigenen Platz braucht. Für zusätzlichen Komfort steht ein WC zur gemeinschaftlichen Nutzung zur Verfügung.</p>
-    <p>Bei Interesse an einem Lager- oder Hobbyraum freuen wir uns über Ihre Kontaktaufnahme. Wir informieren Sie gerne über die verfügbaren Räume und nehmen Ihre Anmeldung entgegen.</p>
-    </x-sections.feature-item>
+   <p>Im Untergeschoss stehen beheizte Lager- und Hobbyräume mit natürlichem Tageslicht bereit. Sie sind weit mehr als klassische Nebenräume und bieten Platz für Kreativität, Handwerk und persönliche Leidenschaften. Ein Ort zum Werkeln, Gestalten, Sammeln – oder einfach für alles, was im Alltag seinen eigenen Platz benötigt. Für zusätzlichen Komfort steht ein WC für die gemeinschaftliche Nutzung bereit.</p>
+<p>Wenn Sie Interesse an einem Lager- oder Hobbyraum haben, freuen wir uns über Ihre Kontaktaufnahme. Gerne informieren wir Sie über die verfügbaren Räume und nehmen Ihre Anmeldung entgegen. </p>   </x-sections.feature-item>
   </div>
 
   <div class="mt-30 md:mt-40">
     <p>
-    <x-links.icon href="#">
+    <x-links.icon href="/downloads/shift-altstetten-kurzbaubeschrieb-gewerbe.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>

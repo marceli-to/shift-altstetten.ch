@@ -54,7 +54,7 @@
     </x-sections.feature-item>
     <x-sections.feature-item>
       <x-headings.h3>Ruhe.</x-headings.h3>
-      <p>Rückzug mitten im Leben.<br>Die Loggia wird zum Lieblingsplatz und die Dachterrasse zum Fenster über die Stadt. Zwischen urbaner Energie und stillen Momenten entsteht ein Rückzugsort, der mit den Jahreszeiten lebt und Raum für kleine Auszeiten schafft.</p>
+      <p>Rückzug mitten im Leben.<br>Das Vier-Jahreszeiten-Zimmer wird zum Lieblingsplatz, die Dachterrasse zum Fenster über die Stadt. Zwischen urbaner Energie und stillen Momenten entsteht ein Rückzugsort, der mit den Jahreszeiten lebt und Raum für kleine Auszeiten bietet.</p>
     </x-sections.feature-item>
     <x-sections.feature-item>
       <x-headings.h3>Möglichkeit.</x-headings.h3>
@@ -68,7 +68,7 @@
       </x-slot:icon>
       Infoblatt Vier-Jahreszeiten-Zimmer
     </x-links.icon>
-    <x-links.icon href="#">
+    <x-links.icon href="/downloads/shift-altstetten-kurzbaubeschrieb-wohnen.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
