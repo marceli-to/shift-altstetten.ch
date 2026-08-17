@@ -17,7 +17,11 @@
   $applyLabel = $isCommercial ? 'Kontakt' : 'Anfrage';
   // Column header above the apply link: Gewerbe uses "Kontakt", Wohnen "Anmeldung".
   $applyColLabel = $isCommercial ? 'Kontakt' : 'Anmeldung';
-  $applyHref = $isCommercial ? route('page.contact') . '#formular' : '#';
+  // Wohnen: pro Objekt der emonitor-Anmeldelink aus der Objektschnittstelle
+  // (`application_form`); Gewerbe: das Kontaktformular.
+  $applyHref = fn ($apt) => $isCommercial
+    ? route('page.contact') . '#formular'
+    : ($apt['application_form'] ?? null);
   $applyExternal = ! $isCommercial;
   $applyKind = $isCommercial ? 'Gewerbefläche' : 'Wohnung';
 
@@ -30,9 +34,12 @@
   // Net rent and incidental costs shown in separate columns. Melon exposes
   // rentalgross_net directly; the mock only has the gross, so derive the net
   // from gross minus incidentals as a fallback.
+  // Noch nicht erfasste Beträge bleiben null und werden als "–" ausgegeben –
+  // sonst stünde bei einem Objekt ohne Mietzins "CHF 0".
   $priceParts = function ($apt) {
-    $incid = (int) ($apt['incidentals'] ?? 0);
-    $net = $apt['rentalgross_net'] ?? (isset($apt['rentalgross']) ? (int) $apt['rentalgross'] - $incid : null);
+    $incid = isset($apt['incidentals']) ? (int) $apt['incidentals'] : null;
+    $net = $apt['rentalgross_net']
+      ?? (isset($apt['rentalgross']) ? (int) $apt['rentalgross'] - (int) $incid : null);
     return [$net, $incid];
   };
   $chf = fn ($v) => $v !== null ? 'CHF ' . number_format((float) $v, 0, '.', '’') : '–';
@@ -61,7 +68,8 @@
       @foreach($apartments as $apartment)
         @php
           $state = $apartment['state'] ?? 'free';
-          $apply = $apartment['application_form'] ?? null;
+          $plan = $apartment['layout_plan'] ?? null;
+          $apply = $applyHref($apartment);
           $outside = $apartment['balcony_area'] ?? $apartment['terrace_area'] ?? $apartment['loggia_area'] ?? null;
         @endphp
         <tr
@@ -110,20 +118,22 @@
           </td>
 
           <td class="text-center">
-              <a 
-                href="#" 
-                target="_blank" 
+            @if($plan)
+              <a
+                href="{{ $plan }}"
+                target="_blank"
                 rel="noopener"
-                class="inline-flex text-cocoa transition-opacity hover:opacity-60" 
-                aria-label="Grundriss herunterladen">
+                class="inline-flex text-cocoa transition-opacity hover:opacity-60"
+                aria-label="Grundriss {{ $apartment['title'] }} herunterladen">
                 <x-icons.download class="w-20 h-auto" />
               </a>
+            @endif
           </td>
 
           <td class="text-right pr-20">
-            @if($state === 'free')
+            @if($state === 'free' && $apply)
               <a
-                href="{{ $applyHref }}"
+                href="{{ $apply }}"
                 @if($applyExternal) target="_blank" rel="noopener" @endif
                 aria-label="{{ $applyLabel }} für {{ $applyKind }} {{ $apartment['title'] }}"
                 @click.stop
@@ -156,7 +166,7 @@
     @php
       $state = $apartment['state'] ?? 'free';
       $plan = $apartment['layout_plan'] ?? null;
-      $apply = $apartment['application_form'] ?? null;
+      $apply = $applyHref($apartment);
       $outside = $apartment['balcony_area'] ?? $apartment['terrace_area'] ?? $apartment['loggia_area'] ?? null;
       [$net, $incid] = $priceParts($apartment);
     @endphp
@@ -186,7 +196,10 @@
 
         <span class="font-normal text-[15px] leading-tight">
           @if($state === 'free')
-            {{ $chf($net) }}<br><span class="text-cocoa/70">+ {{ number_format($incid, 0, '.', '’') }} NK</span>
+            {{ $chf($net) }}
+            @if($incid !== null)
+              <br><span class="text-cocoa/70">+ {{ number_format($incid, 0, '.', '’') }} NK</span>
+            @endif
           @else
             {{ $stateLabel[$state] ?? '' }}
           @endif
@@ -194,9 +207,9 @@
 
         
           <span>
-            @if($state === 'free')
+            @if($state === 'free' && $apply)
               <a
-                href="{{ $applyHref }}"
+                href="{{ $apply }}"
                 @if($applyExternal) target="_blank" rel="noopener" @endif
                 aria-label="{{ $applyLabel }} für {{ $applyKind }} {{ $apartment['title'] }}"
                 @click.stop
@@ -252,17 +265,19 @@
           </div>
         </dl>
 
-        <div class="mt-10 flex justify-end">
-          <a
-            href="#"
-            target="_blank" 
-            rel="noopener"
-            aria-label="Grundriss für Wohnung {{ $apartment['title'] }}"
-            class="inline-flex gap-x-6 items-center rounded-full border font-normal border-cocoa px-12 py-4 uppercase">
-            <x-icons.download variant="file" class="w-14 h-auto" />
-            Grundriss
-          </a>
-        </div>
+        @if($plan)
+          <div class="mt-10 flex justify-end">
+            <a
+              href="{{ $plan }}"
+              target="_blank"
+              rel="noopener"
+              aria-label="Grundriss für {{ $applyKind }} {{ $apartment['title'] }}"
+              class="inline-flex gap-x-6 items-center rounded-full border font-normal border-cocoa px-12 py-4 uppercase">
+              <x-icons.download variant="file" class="w-14 h-auto" />
+              Grundriss
+            </a>
+          </div>
+        @endif
 
       </div>
 

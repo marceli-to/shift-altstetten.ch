@@ -65,7 +65,9 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    // Schweizer Projekt: damit die Änderungsvermerke in der Gewerbeverwaltung
+    // die lokale Zeit zeigen und nicht UTC.
+    'timezone' => 'Europe/Zurich',
 
     /*
     |--------------------------------------------------------------------------

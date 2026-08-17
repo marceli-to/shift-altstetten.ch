@@ -41,14 +41,15 @@
       Anmeldeformular
     </x-links.icon>
     </p>
-    <p>
+    {{-- "Schnittstellenpapier" folgt später (Kunde, 17.08.2026) --}}
+    {{-- <p>
      <x-links.icon href="#">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
       Schnittstellenpapier
     </x-links.icon>
-    </p>
+    </p> --}}
 
   </div>
   
@@ -77,7 +78,7 @@
     </x-links.icon>
     </p>
      <p>
-    <x-links.icon href="#">
+    <x-links.icon href="/downloads/shift-altstetten-grundrissdatenblatt-untergeschoss.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>

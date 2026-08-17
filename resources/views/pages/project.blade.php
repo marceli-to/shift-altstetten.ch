@@ -94,7 +94,8 @@
       heading-class="mt-40"
       bar-color="bg-blush"
       rounded="bottom"
-      text-size="text-[20px]" />
+      text-size="text-[20px]"
+      link-size="text-[26px]" />
   </div>
 
   <div class="px-20 pt-60 pb-40" data-reveal>
@@ -176,7 +177,8 @@
             class="inline-flex items-end gap-x-80 2xl:gap-x-100"
             bar-color="bg-cocoa"
             rounded="top"
-            text-size="text-[22px]" />
+            text-size="text-[22px]"
+            link-size="text-[30px]" />
         </div>
       
       </x-layout.article>

@@ -62,12 +62,13 @@
     </x-sections.feature-item>
   </div>
   <div class="mt-30 md:mt-40 flex flex-col gap-y-10">
-    <x-links.icon href="#">
+    {{-- Infoblatt "Vier-Jahreszeiten-Zimmer" folgt später (Kunde, 17.08.2026) --}}
+    {{-- <x-links.icon href="#">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
       Infoblatt Vier-Jahreszeiten-Zimmer
-    </x-links.icon>
+    </x-links.icon> --}}
     <x-links.icon href="/downloads/shift-altstetten-kurzbaubeschrieb-wohnen.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />

@@ -5,21 +5,16 @@ use App\Actions\FetchData;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * Wohnungen aus der Melon-Objektschnittstelle. Der Feed enthält ausschliesslich
+ * die Wohnungen; die Gewerbeobjekte werden lokal gepflegt
+ * (App\Models\CommercialObject).
+ */
 class GetData
 {
   public function execute(): Collection
   {
-    // Position of each object in the counter-clockwise, per-floor isometry
-    // order (config/estate.php), keyed by lowercase title.
-    $order = array_flip(config('estate.order', []));
-
-    return collect($this->source())
-      ->map(fn ($object) => $this->normalize($object))
-      // Order the rows to run counter-clockwise around each floor as arranged in
-      // the isometry, not by the alphabetical object number. Objects missing
-      // from the order sort to the end, keeping their original relative order.
-      ->sortBy(fn ($object) => $order[strtolower($object['title'] ?? '')] ?? PHP_INT_MAX)
-      ->values();
+    return collect($this->source())->map(fn ($object) => $this->normalize($object))->values();
   }
 
   /**
@@ -56,6 +51,13 @@ class GetData
       'rented', 'taken' => 'taken',
       default => 'free',
     };
+
+    // Melon liefert für nicht hinterlegte Dateien "#" statt null.
+    foreach (['layout_plan', 'application_form'] as $link) {
+      if (($object[$link] ?? null) === '#') {
+        $object[$link] = null;
+      }
+    }
 
     return $object;
   }

@@ -5,11 +5,16 @@
   $availability = collect($options['availability'] ?? [])->replace(['NULL' => $allLabel])->all();
   $rooms = collect($options['rooms'] ?? [])->replace(['NULL' => 'Alle Zimmer'])->all();
   $floors = collect($options['floors'] ?? [])->replace(['NULL' => 'Alle Etagen'])->all();
+
+  // Gewerbeflächen sind Einzelräume ohne Zimmerzahl – analog zur Tabelle, die
+  // die Zimmer-Spalte für "sky" ausblendet, entfällt hier der Zimmer-Filter.
+  $showRooms = $accent !== 'sky';
+  $colSpan = $showRooms ? 'lg:col-span-3' : 'lg:col-span-4';
 @endphp
 
 <div class="grid grid-cols-1 gap-15 sm:grid-cols-2 lg:grid-cols-12 lg:gap-20">
 
-  <div class="lg:col-span-3">
+  <div class="{{ $colSpan }}">
     <x-forms.select
       id="availability"
       label="Verfügbarkeit"
@@ -19,7 +24,8 @@
       :accent="$accent" />
   </div>
 
-  <div class="lg:col-span-3">
+  @if($showRooms)
+  <div class="{{ $colSpan }}">
     <x-forms.select
       id="rooms"
       label="Zimmer"
@@ -28,8 +34,9 @@
       :options="$rooms"
       :accent="$accent" />
   </div>
+  @endif
 
-  <div class="lg:col-span-3">
+  <div class="{{ $colSpan }}">
     <x-forms.select
       id="floor"
       label="Etage"
@@ -39,7 +46,7 @@
       :accent="$accent" />
   </div>
 
-  <div class="lg:col-span-3">
+  <div class="{{ $colSpan }}">
     <button
       type="button"
       class="js-btn-reset flex h-50 lg:h-46 w-full cursor-pointer items-center px-10 font-bold text-cocoa transition-opacity hover:opacity-80 {{ $accent === 'sky' ? 'bg-sky' : 'bg-blush' }}">

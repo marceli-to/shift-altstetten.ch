@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Actions\SendLeadToMelon;
 use App\Mail\ContactOwnerMail;
 use App\Mail\ContactUserMail;
 use Illuminate\Http\Request;
@@ -35,6 +36,10 @@ class ContactController extends Controller
 
     Mail::to(self::RECIPIENT)->send(new ContactOwnerMail($data));
     Mail::to($data['email'])->send(new ContactUserMail($data));
+
+    // Zusätzlich als Interessenten-Lead an Melon; schlägt der Hook fehl, wird
+    // das nur geloggt (siehe SendLeadToMelon).
+    (new SendLeadToMelon)->execute($data);
 
     return $this->success();
   }
