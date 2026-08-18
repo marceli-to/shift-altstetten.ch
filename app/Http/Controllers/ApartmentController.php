@@ -45,16 +45,23 @@ class ApartmentController extends Controller
   }
 
   /**
-   * Order the rows to run counter-clockwise around each floor as arranged in
-   * the isometry (config/estate.php), not by the alphabetical object number.
-   * Objects missing from the order sort to the end, keeping their relative order.
+   * Erst nach Geschoss, dann innerhalb des Geschosses in der Reihenfolge der
+   * Isometrie: Start vorne links, dann gegen den Uhrzeigersinn (config/estate.php).
+   *
+   * Das Geschoss kommt bewusst aus `floor_num` und nicht aus der Position in
+   * der Liste – so koennen sich die Geschosse auch dann nicht ineinander
+   * schieben, wenn die Liste einmal falsch gepflegt wird. Objekte ohne Eintrag
+   * landen am Ende ihres Geschosses und behalten ihre relative Reihenfolge.
    */
   private function sortByIsometry(Collection $apartments): Collection
   {
     $order = array_flip(config('estate.order', []));
 
     return $apartments
-      ->sortBy(fn ($object) => $order[strtolower($object['title'] ?? '')] ?? PHP_INT_MAX)
+      ->sortBy(fn ($object) => [
+        $object['floor_num'] ?? PHP_INT_MAX,
+        $order[strtolower($object['title'] ?? '')] ?? PHP_INT_MAX,
+      ])
       ->values();
   }
 

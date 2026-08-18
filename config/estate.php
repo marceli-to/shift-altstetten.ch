@@ -35,20 +35,35 @@ return [
     ],
 
     /*
-     * Display order of the objects, per floor, running counter-clockwise around
-     * the floor as arranged in the isometry (resources/views/components/objects/
-     * iso.blade.php) — NOT the alphabetical object number. Each floor starts at
-     * its "…1a" apartment and loops around the core. Keys are lowercase titles.
-     * Derived from the isometry geometry; regenerate if the isometry changes.
+     * Reihenfolge der Objekte innerhalb eines Geschosses, wie sie in der
+     * Isometrie (resources/views/components/objects/iso.blade.php) umlaufen:
+     * Start bei der Wohnung vorne links ("…1a"), dann gegen den Uhrzeigersinn
+     * um den Kern. Schluessel sind die kleingeschriebenen Titel.
+     *
+     * Die Geschossgruppierung haengt NICHT an dieser Liste – sortiert wird
+     * zuerst nach `floor_num` (siehe ApartmentController::sortByIsometry), die
+     * Liste bestimmt nur die Reihenfolge innerhalb eines Geschosses.
+     *
+     * Hergeleitet aus den Polygon-Schwerpunkten der Isometrie; EG bis 4. OG
+     * haben denselben Wohnungssatz und damit dieselbe Reihenfolge. Bei einer
+     * neu gezeichneten Isometrie neu herleiten – CommercialAdminTest bzw.
+     * ObjectOrderTest schlagen an, wenn Objekt und Liste auseinanderlaufen.
      */
     'order' => [
-        'b01', 'b02', 'w001a', 'w002a', 'w003b', 'w001b', 'w002b', 'w003a', 'w004b',
+        // EG
+        'b01', 'b02', 'w001a', 'w002a', 'w003b', 'w004b', 'w001b', 'w002b', 'w003a',
+        // 1. OG
         'b03', 'b04', 'w101a', 'w102a', 'w103b', 'w104b', 'w101b', 'w102b', 'w103a',
-        'b05', 'b06', 'w201a', 'w202a', 'w203b', 'w201b', 'w202b', 'w203a', 'w204b',
-        'b07', 'b08', 'w301a', 'w302a', 'w303b', 'w301b', 'w302b', 'w303a', 'w304b',
+        // 2. OG
+        'b05', 'b06', 'w201a', 'w202a', 'w203b', 'w204b', 'w201b', 'w202b', 'w203a',
+        // 3. OG
+        'b07', 'b08', 'w301a', 'w302a', 'w303b', 'w304b', 'w301b', 'w302b', 'w303a',
+        // 4. OG
         'b09', 'b10', 'w401a', 'w402a', 'w403b', 'w404b', 'w401b', 'w402b', 'w403a',
-        'b11', 'b12', 'w501a', 'w502a', 'w603b', 'w604b', 'w501b', 'w601b', 'w602b', 'w503a', 'w502b',
-        'w601a',
+        // 5. OG – ohne …3b/…4b rueckt …2b an die aeussere Position
+        'b11', 'b12', 'w501a', 'w502a', 'w502b', 'w501b', 'w503a',
+        // Attika
+        'w601a', 'w603b', 'w604b', 'w601b', 'w602b',
     ],
 
 ];
