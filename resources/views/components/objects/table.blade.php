@@ -12,9 +12,9 @@
   $showRooms = $accent !== 'sky';
 
   // Gewerbe (sky) is not handled via the emonitor application flow; instead of
-  // the "Anfrage" button it shows a "Kontakt" link pointing to the contact form.
+  // the "Bewerben" button it shows a "Kontakt" link pointing to the contact form.
   $isCommercial = $accent === 'sky';
-  $applyLabel = $isCommercial ? 'Kontakt' : 'Anfrage';
+  $applyLabel = $isCommercial ? 'Kontakt' : 'Bewerben';
   // Column header above the apply link: Gewerbe uses "Kontakt", Wohnen "Anmeldung".
   $applyColLabel = $isCommercial ? 'Kontakt' : 'Anmeldung';
   // Wohnen: pro Objekt der emonitor-Anmeldelink aus der Objektschnittstelle
@@ -213,7 +213,8 @@
                 @if($applyExternal) target="_blank" rel="noopener" @endif
                 aria-label="{{ $applyLabel }} für {{ $applyKind }} {{ $apartment['title'] }}"
                 @click.stop
-                class="inline-flex items-center rounded-full border font-normal uppercase border-cocoa px-10 py-4">
+                {{-- 16px statt der 20px der Zeile: "Bewerben" sprengt sonst die Drittelspalte --}}
+                class="inline-flex items-center rounded-full border font-normal text-[16px] uppercase whitespace-nowrap border-cocoa px-10 py-4">
                 {{ $applyLabel }}
               </a>
             @else

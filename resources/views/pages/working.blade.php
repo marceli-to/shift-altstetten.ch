@@ -38,7 +38,7 @@
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
-      Anmeldeformular
+      Anmeldeformular Büro
     </x-links.icon>
     </p>
     {{-- "Schnittstellenpapier" folgt später (Kunde, 17.08.2026) --}}
@@ -78,11 +78,27 @@
     </x-links.icon>
     </p>
      <p>
-    <x-links.icon href="/downloads/shift-altstetten-grundrissdatenblatt-untergeschoss.pdf" target="_blank">
+    <x-links.icon href="/downloads/shift-altstetten-grundrisse-lager-hobbyraeume-keller.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>
-      Grundrissdatenblatt Untergeschoss
+      Grundrisse Lager-/Hobbyräume und Keller
+    </x-links.icon>
+    </p>
+     <p>
+    <x-links.icon href="/downloads/shift-altstetten-preisliste-lager-hobbyraeume.pdf" target="_blank">
+      <x-slot:icon>
+        <x-icons.download class="w-18 h-auto" variant="file" />
+      </x-slot:icon>
+      Preisliste Lager-/Hobbyräume
+    </x-links.icon>
+    </p>
+     <p>
+    <x-links.icon href="/downloads/shift-altstetten-anmeldeformular-lager-hobbyraum.pdf" target="_blank">
+      <x-slot:icon>
+        <x-icons.download class="w-18 h-auto" variant="file" />
+      </x-slot:icon>
+      Anmeldeformular Lager-/Hobbyraum
     </x-links.icon>
     </p>
   </div>
