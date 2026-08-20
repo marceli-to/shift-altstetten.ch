@@ -9,8 +9,11 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-  // Recipient for contact enquiries.
-  private const RECIPIENT = 'shift@cavegn-immobilien.ch';
+  // Recipients for contact enquiries.
+  private const RECIPIENTS = [
+    'friedli@cavegn-immobilien.ch',
+    'shift@cavegn-immobilien.ch',
+  ];
 
   public function send(Request $request)
   {
@@ -34,7 +37,7 @@ class ContactController extends Controller
       'privacy.accepted' => 'Bitte akzeptieren Sie die Datenschutzerklärung.',
     ]);
 
-    Mail::to(self::RECIPIENT)->send(new ContactOwnerMail($data));
+    Mail::to(self::RECIPIENTS)->send(new ContactOwnerMail($data));
     Mail::to($data['email'])->send(new ContactUserMail($data));
 
     // Zusätzlich als Interessenten-Lead an Melon; schlägt der Hook fehl, wird
