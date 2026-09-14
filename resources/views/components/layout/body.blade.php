@@ -3,3 +3,10 @@
   x-data="{ menu: false }">
   {{ $slot }}
 </body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-135LSXJEKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-135LSXJEKF');
+</script>
