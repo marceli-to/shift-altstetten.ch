@@ -5,8 +5,12 @@
 
 @php
   $workingImages = [
-    '/img/cavegn-badenerstrasse-int-c03',
-    '/img/cavegn-badenerstrasse-ext-c01',
+    '/img/arbeiten-coaching-beratung',
+    '/img/arbeiten-kreativatelier',
+    '/img/arbeiten-fotografenstudio',
+    '/img/arbeiten-chiropraktiker-therapiepraxis',
+    '/img/arbeiten-kosmetik',
+    '/img/arbeiten-nagelstudio',
   ];
 
   $extras = [
