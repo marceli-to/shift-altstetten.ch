@@ -30,6 +30,10 @@
     '<p>Wo einst gearbeitet wurde, entsteht heute Raum zum Leben, Arbeiten und Ankommen. Die ehemalige Gewerbeliegenschaft an der <span class="whitespace-nowrap">Badenerstrasse&nbsp;587–589</span> wird sorgfältig in grosszügige Loftwohnungen und Kleingewerbeflächen mit industriellem Flair transformiert.</p>',
     '<p>Urban. Charakterstark. Unverwechselbar.<br>Vielleicht schon bald Ihr neues Zuhause.<br>Oder der Ort, an dem aus Ideen Wirklichkeit wird.</p>',
   ];
+  $introButton = [
+    'label' => 'Für Besichtigung der Musterwohnung vormerken',
+    'href' => 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=s8KrYaQ4aEKNRoIVCP8zhGXZI-TvohRBnTNOBBfmgTlUQ0s3MFE5STBCWkRaTVk4UFJORlNGQllGRSQlQCN0PWcu',
+  ];
 
   $conceptTitle = 'Raumkonzepte mit industriellem Charme';
   $conceptText = [
@@ -66,6 +70,11 @@
     @foreach($introText as $line)
       {!! $line !!}
     @endforeach
+    <div class="mt-40">
+      <x-buttons.primary :href="$introButton['href']" target="_blank" rel="noopener" :icon="false">
+        {{ $introButton['label'] }}
+      </x-buttons.primary>
+    </div>
   </div>
 
   <div class="bg-cocoa text-blush px-20 flex justify-between">
@@ -151,6 +160,11 @@
       @foreach($introText as $line)
         {!! $line !!}
       @endforeach
+      <div class="mt-40">
+        <x-buttons.primary :href="$introButton['href']" target="_blank" rel="noopener" :icon="false">
+          {{ $introButton['label'] }}
+        </x-buttons.primary>
+      </div>
     </div>
 
     <x-slot:aside>
