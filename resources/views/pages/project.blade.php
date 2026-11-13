@@ -32,7 +32,7 @@
   ];
   $introButton = [
     'label' => 'Für Besichtigung der Musterwohnung anmelden',
-    'href' => 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=s8KrYaQ4aEKNRoIVCP8zhGXZI-TvohRBnTNOBBfmgTlUQ0s3MFE5STBCWkRaTVk4UFJORlNGQllGRSQlQCN0PWcu',
+    'href' => route('page.contact') . '#formular',
   ];
 
   $conceptTitle = 'Raumkonzepte mit industriellem Charme';
@@ -71,7 +71,7 @@
       {!! $line !!}
     @endforeach
     <div class="mt-40">
-      <x-buttons.primary :href="$introButton['href']" target="_blank" rel="noopener" :icon="false">
+      <x-buttons.primary :href="$introButton['href']" :icon="false">
         {{ $introButton['label'] }}
       </x-buttons.primary>
     </div>
@@ -161,7 +161,7 @@
         {!! $line !!}
       @endforeach
       <div class="mt-40">
-        <x-buttons.primary :href="$introButton['href']" target="_blank" rel="noopener" :icon="false">
+        <x-buttons.primary :href="$introButton['href']" :icon="false">
           {{ $introButton['label'] }}
         </x-buttons.primary>
       </div>
