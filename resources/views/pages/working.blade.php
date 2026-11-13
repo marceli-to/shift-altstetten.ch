@@ -90,7 +90,7 @@
     </x-links.icon>
     </p>
      <p>
-    <x-links.icon href="/downloads/shift-altstetten-preisliste-lager-hobbyraeume-23-09-2026.pdf" target="_blank">
+    <x-links.icon href="/downloads/shift-altstetten-preisliste-lager-hobbyraeume-12-11-2026.pdf" target="_blank">
       <x-slot:icon>
         <x-icons.download class="w-18 h-auto" variant="file" />
       </x-slot:icon>

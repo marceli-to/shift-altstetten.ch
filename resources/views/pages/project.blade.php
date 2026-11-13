@@ -31,7 +31,7 @@
     '<p>Urban. Charakterstark. Unverwechselbar.<br>Vielleicht schon bald Ihr neues Zuhause.<br>Oder der Ort, an dem aus Ideen Wirklichkeit wird.</p>',
   ];
   $introButton = [
-    'label' => 'Für Besichtigung der Musterwohnung vormerken',
+    'label' => 'Für Besichtigung der Musterwohnung anmelden',
     'href' => 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=s8KrYaQ4aEKNRoIVCP8zhGXZI-TvohRBnTNOBBfmgTlUQ0s3MFE5STBCWkRaTVk4UFJORlNGQllGRSQlQCN0PWcu',
   ];
 
